@@ -1,0 +1,493 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bree Serif', serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #272727;
+    
+}
+
+.registro{
+    position: relative;
+    min-height: 100vh;
+    width: 50%;
+    background: #c9c9c9;
+    border-right: 3.5px solid red;
+}
+
+.login{
+    transition: .5s ease-in-out; 
+    position: relative;
+    min-height: 100vh;
+    width: 50%;
+    background: #272727;
+    border-left: 3.5px solid red;
+}
+
+.formregistro{
+    margin: 8vh 0vh 8vh 15vh;
+    height: 84vh;
+    background-color: rgb(39, 39, 39, 0.2);
+    border-radius: 12px 0px 0px 12px;
+    border-left: 10px solid #272727;
+    box-shadow: inset 0px 0px 400px 6px rgba(0,0,0,0.75);
+}
+
+.formlogin{
+    margin: 8vh 15vh 8vh 0vh;
+    height: 84vh;
+    background-color: rgb(39, 39, 39, 0.2);
+    border-radius: 0px 12px 12px 0px;
+    border-right: 10px solid #c9c9c9;
+    box-shadow: inset 0px 0px 400px 6px rgba(0,0,0,0.75);
+}
+#titulo1{
+    padding-top: 5vh;
+    color: black;
+    z-index: 2;
+    font-size: 3em;
+}
+
+#info{
+    text-align: left;
+    margin-top: 3vh;
+    margin-left: 5vh;
+
+}
+
+#info2{
+    text-align: left;
+    margin-top: 3vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    font-size: 1.2em;
+
+
+}
+
+
+
+.imagenes{
+    position: relative;
+    margin-top: 3vh;
+    display: inline-block;
+}
+
+
+#titulo2{
+    padding-top: 5vh;
+    color: white;
+    z-index: 2;
+    font-size: 3em;
+}
+
+.face {
+    width: 30%;
+    min-width: 100px;
+    background-color: #272727;
+    padding: 10px 10px;
+    color: #028bca;
+    display: flex;
+    transition: .2s ease-in-out;
+    margin-right: 10px;
+    margin-top: 5vh;
+    transform: scale(1.3);
+    text-decoration: none; 
+    border: 2px solid #028bca;
+}
+
+.face i {
+    color: #028bca;
+    font-size: 20px;
+    padding-right: 10px;
+    transition: .3s ease-in-out; 
+}
+
+.face span {
+    align-self: center;
+    opacity: 1;
+    transition: .2s ease-in-out; 
+}
+
+.face:hover {
+    transform: scale(1.5);
+    background: linear-gradient(to right, #6dc8f1 0%, #005786 100%); }
+    .face:hover i {
+    transform: translateX(6vw);
+    color: #272727; }
+    .face:hover span {
+    opacity: 0; 
+}
+
+.email {
+    width: 30%;
+    min-width: 100px;
+    background-color: #272727;
+    padding: 10px 10px;
+    color: #ff4d4d;
+    display: flex;
+    transition: .2s ease-in-out;
+    margin-right: 10px;
+    margin-top: 4vh;
+    transform: scale(1.3);
+    text-decoration: none; 
+    border: 2px solid #ff4d4d;
+}
+
+.email i {
+    color: #ff4d4d;
+    font-size: 20px;
+    padding-right: 10px;
+    transition: .3s ease-in-out; 
+}
+
+.email span {
+    align-self: center;
+    opacity: 1;
+    transition: .2s ease-in-out; 
+}
+
+.email:hover {
+    transform: scale(1.5);
+    background: linear-gradient(to right, #ff7878 0%, red 100%); }
+    .email:hover i {
+    transform: translateX(6vw);
+    color: #272727; }
+    .email:hover span {
+    opacity: 0; 
+}
+
+#sesion{
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+    font-size: 2em;
+    color: white;
+}
+
+#form{
+    position: relative; 
+    margin-top: 3vh;
+}
+
+#form #email{
+    width: 25vw;
+    background: #373737;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-style: 18px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 1vh;
+}
+
+#form .inputBox{
+    position: relative;
+}
+
+#text{
+    display: block;
+    color: #fff;
+    font-weight: 300;
+    padding: 5px;
+}
+
+.checkbox{
+    margin: 1.5vh 0vh 0vh 0vw;
+    color: white;
+}
+
+#recuerdame{
+    margin-top: 1vh;
+}
+
+.iniciarsesion{
+    width: 40%;
+    min-width: 100px;
+    background-color: #272727;
+    padding: 10px 10px;
+    color: #FFF;
+    text-align: center;
+    display: flex;
+    transition: .2s ease-in-out;
+    margin-right: 10px;
+    margin-top: 4vh;
+    transform: scale(1.4);
+    text-decoration: none; 
+    cursor: pointer;
+    border: 2px solid #FFF;
+}
+
+.iniciarsesion i {
+    margin-left: 2vh;
+    color: #FFF;
+    font-size: 1.5em;
+    padding-right: 10px;
+    transition: .3s ease-in-out; 
+}
+
+.iniciarsesion span {
+    align-self: center;
+    opacity: 1;
+    transition: .2s ease-in-out; 
+}
+
+.iniciarsesion:hover {
+    transform: scale(1.5);
+    background: linear-gradient(to right, whitesmoke 0%, #6e6e6e 100%); 
+}
+
+.iniciarsesion:hover i {
+    transform: translateX(7vw) scale(1.7);
+    color: #272727;
+ }
+
+.iniciarsesion:hover span {
+    opacity: 0; 
+}
+
+.volver{
+    position: absolute;
+    margin: auto;
+    border: 8px solid red;
+    border-radius: 50%;
+    width: 15vh;
+    height: 15vh;
+    z-index: 5;
+    transform: scale(0.5);
+    transition: .5s ease-in-out;
+    cursor: pointer; 
+    box-shadow: inset 0px 0px 20px 6px rgba(0,0,0,0.75);
+    background: linear-gradient(to right, rgba(27,27,27,1) 0%, rgba(27,27,27,1) 49%, rgba(100,100,100,1) 50%, rgba(201, 201, 201,1) 51%, rgba(201, 201, 201,1) 100%);
+}
+
+.volver:hover{
+    transform: scale(0.8);
+}
+
+.volver a{
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    display: inline-block;
+    margin-top: 5vh;
+    font-size: 2em;
+}
+
+.volver #a1{
+    position: relative;
+    color: #c9c9c9;
+    width: 50%;
+}
+
+.volver #a2{
+    position: relative;
+    color: #272727;
+    width: 50%;
+}
+
+.registrarse{
+    width: 40%;
+    min-width: 100px;
+    background-color: #272727;
+    padding: 10px 10px;
+    color: #FFF;
+    text-align: center;
+    display: flex;
+    transition: .2s ease-in-out;
+    margin-right: 10px;
+    margin-top: 3vh;
+    transform: scale(1.3);
+    text-decoration: none; 
+    cursor: pointer;
+    border: 2px solid #FFF;
+}
+
+.registrarse i {
+    margin-left: 2vh;
+    color: #FFF;
+    font-size: 1.5em;
+    padding-right: 10px;
+    transition: .3s ease-in-out; 
+}
+
+.registrarse span {
+    align-self: center;
+    opacity: 1;
+    transition: .2s ease-in-out; 
+}
+
+.registrarse:hover {
+    transform: scale(1.5);
+    background: linear-gradient(to right, whitesmoke 0%, #6e6e6e 100%); 
+}
+
+.registrarse:hover i {
+    transform: translateX(7.5vw) scale(1.7);
+    color: #272727;
+ }
+
+.registrarse:hover span {
+    opacity: 0; 
+}
+
+.formularioReg{
+    
+    display: none;
+    position: absolute;
+    margin: auto;
+    width: 24vw;
+    height: 85vh;
+    background-color: rgb(255, 255, 255, 0.9);
+    z-index: 7;
+    border-radius: 8%;
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
+    border-left: 3px solid red;
+    border-right: 3px solid red;
+    box-shadow: inset 0px 0px 20px 2px rgba(255,0,0,0.75);
+}
+
+#registroform{
+    position: relative; 
+
+}
+
+#registroform #email2{
+    width: 18vw;
+    background: #FFF;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: #000;
+    font-style: 18px;
+    margin-bottom: 1vh;
+    border: none;
+    border-bottom: 2px solid #222;
+}
+
+#registroform .email2{
+    width: 18vw;
+    background: #FFF;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: #000;
+    font-style: 18px;
+    margin-bottom: 1vh;
+    border: 2px solid black;
+}
+
+#registroform .inputBox{
+    position: relative;
+    
+}
+
+.inputBox .invalid-feedback{
+    display: inline-block;
+}
+
+.inputBox p{
+    font-size: 0.8em;
+    color: darkred;
+}
+
+#text2{
+    display: block;
+    color: #292929;
+    font-weight: 300;
+    padding: 5px;
+}
+
+.Botonregistro {
+    width: 30%;
+    min-width: 100px;
+    background-color: #C9C9C9;
+    padding: 10px 10px;
+    color: black;
+    display: flex;
+    transition: .2s ease-in-out;
+    margin-right: 10px;
+    margin-top: 3vh;
+    text-decoration: none; 
+    border: 2px solid #000;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.Botonregistro i {
+    color: black;
+    font-size: 20px;
+    padding-right: 10px;
+    transition: .3s ease-in-out; 
+    margin-top: 0.3vh;
+}
+
+.Botonregistro span {
+    align-self: center;
+    opacity: 1;
+    transition: .2s ease-in-out; 
+}
+
+.Botonregistro:hover {
+    transform: scale(1.2);
+    background: linear-gradient(to right, #6E6E6E 0%, whitesmoke 100%); 
+    
+    }
+    
+.Botonregistro:hover i {
+    transform: translateX(2.9vw) scale(1.5);
+    color: #272727; 
+    
+    }
+
+.Botonregistro:hover span {
+    opacity: 0; 
+}
+
+.botonCerrar{
+    position: absolute;
+    top: -5px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 70px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.alerta{
+    position: absolute;
+    z-index: 8;
+    margin-top: -40vh;
+    margin-left: 40vw;
+    padding: 2%;
+    color: green;
+    border: 2px solid green;
+    background-color: lightgreen;
+    border-radius: 2em;
+    box-shadow: inset 0px 0px 5px 2px rgba(0,204,0,0.75);
+}
+
+.botonCerrarAlerta{
+    position: absolute;
+    top: -10px;
+    right: 18px;
+    transition: all 200ms;
+    font-size: 40px;
+    text-decoration: none;
+    color: green;
+    cursor: pointer;
+}

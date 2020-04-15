@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Bree Serif', serif;
+}
+.opcion1{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    border-bottom: 5px solid red;
+    
+}
+
+.opcion1{
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.opcion1:hover{
+    filter: grayscale(0%);
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #fff, 0 0 55px #fff;
+}
+
+.opcion2{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    border-top: 5px solid red;
+    cursor: pointer;
+}
+
+.opcion2{
+    filter: grayscale(100%);
+}
+
+.opcion2:hover{
+    filter: grayscale(0%);
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #fff, 0 0 55px #fff;
+}
+
+.textConcierto{
+    position: relative;
+    z-index: 5;
+    color: silver;
+    margin-top: -45vh;
+    font-size: 5em;
+    
+}
+
+.textCine{
+    position: relative;
+    z-index: 5;
+    color: silver;
+    margin-top: -50vh;
+    font-size: 5em;
+}
+
+/* MENUTXOA */
+
+.menus{
+        font-family: 'Bree Serif', serif;
+    }
+
+    .menu{
+        position: fixed;
+        background-color: #ccc;
+        margin-top: 0vh;
+        width: 5%;
+        height: 100vh;
+        overflow-x: hidden;
+        z-index: 5;
+        box-shadow: inset 0px 1px 50px #555;
+    }
+
+    .opcionesmenu{
+        margin-top: 4.5vh;
+    }
+
+    .menu a{
+        display: block;
+        margin-top: 15%;
+        padding: 0% 0% 20% 0%;
+        text-decoration: none;
+        color: #222;
+        text-align: center;
+    }
+
+    .menu .logo{
+        margin: 30% 0% 30% 0%;
+        padding: 20% 0% 20% 0%;
+    }
+
+    .icono{
+        font-size: 2.8em;
+    }
+
+    /* MENU2 */
+    .menu2{
+        position: fixed;
+        background-color: #ccc;
+        margin-top: 0vh;
+        width: 11%;
+        height: 100vh;
+        overflow-x: hidden;
+        z-index: 5;
+        box-shadow: inset 0px 1px 100px #555;
+    }
+    
+    .logo2{
+        margin-top: -7vh;
+    }
+
+    .menu2 a{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0% 0% 0% 10%;
+        padding: 8% 0% 8% 0%;
+        text-decoration: none;
+        color: #222;
+        text-align: center;
+        ;
+    }
+
+    .menu2 a:hover{
+        background-color: #777;
+        margin: 0;
+        padding-left: 15%;
+        box-shadow: inset 0px 0px 20px 1px rgba(10,10,10,0.75);
+    }
+
+    .menu2 .material-icons{
+        margin-right: 10%;
+    }
+
+    .menu2 a .active:hover {
+        background-color: #222;
+        color: #ccc;
+    }
+
+    .menu2 img{
+        margin-top: 20px;
+        padding: 20% 0% 5% 0%;
+    }
+    
+    a{
+        text-decoration: none;
+    }

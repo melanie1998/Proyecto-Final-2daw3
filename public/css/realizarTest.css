@@ -1,0 +1,447 @@
+
+    body{
+        margin: 0;
+        background: #272727;
+        font-family: 'Arial';
+        background-image: url('Imagenes/logo2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+    }
+
+    .fondo{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(39, 39, 39, 0.90);
+        box-shadow: inset 0px 0px 400px 6px rgba(0,0,0,0.75);
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* PREGUNTA 1 */
+    .pregunta1{
+        display: block;
+        position: absolute;
+        margin-left: -2vw;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .pregunta1 h2{
+        margin-top: 8vh;
+        margin-left: 2vw;
+        font-size: 3em;
+        color: white;
+    }
+
+    .genero{
+        display: inline-block;
+        position: relative;
+        margin-top: 3vh;
+        margin-left: 5vw;
+        margin-bottom: 4vh;
+        width: 25%;
+        height: 28vh;
+        color: white;
+        border: 5px solid #c9c9c9;   
+    }
+
+    .genero:hover{
+        border: 5px solid green;   
+
+    }
+
+    .negro2{
+        position: absolute;
+        background-color: #222;
+        opacity: 0.9;
+        width: 100%;
+        height: 100%;
+    }
+
+    .genero h4{
+        position: absolute;
+        text-decoration: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        margin-top: 2vh;
+        font-size: 1.5em;
+        z-index: 2;
+    }
+
+    .genero img{
+        position: absolute;
+        top: 3vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 35%;
+        z-index: 2;
+    }
+
+    #documental{
+        background-image: url('Imagenes/documental.jpg');
+        background-size: 100% 100%;
+    } 
+
+    #cienciaficcion{
+        background-image: url('Imagenes/cienciaficcion.jpg');
+        background-size: 100% 100%;
+    }
+
+    #comedia{
+        background-image: url('Imagenes/comedia.jpg');
+        background-size: 100% 100%;
+    }
+
+    #miedo{
+        background-image: url('Imagenes/miedo.jpg');
+        background-size: 100% 100%;
+    }
+   
+   #drama{
+        background-image: url('Imagenes/drama.jpg');
+        background-size: 100% 100%;
+    }
+
+    #suspense{
+        background-image: url('Imagenes/suspense.jpg');
+        background-size: 100% 100%;
+    }
+    
+    /* PREGUNTA 2 */
+
+    .pregunta2{
+        display: block;
+        position: absolute;
+        height: 100vh;
+        margin-top: 100vh;
+        width: 60%;
+        pointer-events:none;
+        background-color: #222; 
+        opacity: 0.2;
+    }
+
+    .pregunta2 h2{
+        margin-top: 8vh;
+        font-size: 3em;
+        color: white;
+    }
+
+    .pregunta2 a{
+        text-decoration: none;
+        color: white;   
+    }
+
+    .pelicula{
+        position: relative;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        width: 52%;
+        height: 8vh;
+        background-color: rgb(20,20,20,0.8);
+        border: 5px solid silver;
+        display: inline-block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pelicula h4{
+        font-size: 1.2em;
+        position: absolute;
+        top: 3vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    /* PREGUNTA 3 */
+    .pregunta3{
+        display: block;
+        position: absolute;
+        height: 100vh;
+        margin-top: 200vh;
+        width: 60%;
+        pointer-events:none;
+        background-color: #222; 
+        opacity: 0.2;
+    }
+
+    .pregunta3 h2{
+        margin-top: 8vh;
+        font-size: 3em;
+        color: white;
+    }
+
+    .pregunta3 a{
+        text-decoration: none;
+        color: white;   
+    }
+
+    .serie{
+        position: relative;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        width: 52%;
+        height: 8vh;
+        background-color: rgb(20,20,20,0.8);
+        border: 5px solid silver;
+        display: inline-block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .serie h4{
+        font-size: 1.2em;
+        position: absolute;
+        top: 3vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    /* PREGUNTA 4 */
+    .pregunta4{
+        display: block;
+        position: absolute;
+        margin-left: -2vw;
+        margin-top: 300vh;
+        height: 100vh;
+        width: 70%;
+        pointer-events:none;
+        background-color: #222; 
+        opacity: 0.2;
+    }
+
+    .pregunta4 h2{
+        margin-top: 8vh;
+        margin-left: 2vw;
+        font-size: 3em;
+        color: white;
+    }
+
+    .genero{
+        display: inline-block;
+        position: relative;
+        margin-top: 3vh;
+        margin-left: 5vw;
+        margin-bottom: 4vh;
+        width: 25%;
+        height: 28vh;
+        color: white;
+        border: 5px solid #c9c9c9;   
+    }
+
+    .genero:hover{
+        border: 5px solid green;   
+
+    }
+
+    .negro2{
+        position: absolute;
+        background-color: #222;
+        opacity: 0.9;
+        width: 100%;
+        height: 100%;
+    }
+
+    .genero h4{
+        position: absolute;
+        text-decoration: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        margin-top: 2vh;
+        font-size: 1.5em;
+        z-index: 2;
+    }
+
+    .genero img{
+        position: absolute;
+        top: 3vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 35%;
+        z-index: 2;
+    }
+
+    #pop{
+        background-image: url('Imagenes/pop.jpg');
+        background-size: 100% 100%;
+    } 
+
+    #indie{
+        background-image: url('Imagenes/indie.jpg');
+        background-size: 100% 100%;
+    }
+
+    #trap{
+        background-image: url('Imagenes/trap.jpg');
+        background-size: 100% 100%;
+    }
+
+    #electronica{
+        background-image: url('Imagenes/electronica.jpg');
+        background-size: 100% 100%;
+    }
+   
+   #latino{
+        background-image: url('Imagenes/latino.jpg');
+        background-size: 100% 100%;
+    }
+
+    #rap{
+        background-image: url('Imagenes/raphiphop.jpg');
+        background-size: 100% 100%;
+    }
+
+    /*PREGUNTA 5*/
+    .pregunta5{
+        display: block;
+        position: absolute;
+        margin-top: 400vh;
+        height: 100vh;
+        width: 60%;
+        pointer-events:none;
+        background-color: #222; 
+        opacity: 0.2;
+    }
+
+    .pregunta5 h2{
+        margin-top: 8vh;
+        font-size: 3em;
+        color: white;
+    }
+
+    .pregunta5 a{
+        text-decoration: none;
+        color: white;   
+    }
+
+    .cancion{
+        position: relative;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        width: 52%;
+        height: 8vh;
+        background-color: rgb(20,20,20,0.8);
+        border: 5px solid silver;
+        display: inline-block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cancion h4{
+        font-size: 1.2em;
+        position: absolute;
+        top: 3vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    /*PREGUNTA 6*/
+    .pregunta6{
+        display: block;
+        position: absolute;
+        margin-top: 500vh;
+        height: 100vh;
+        width: 60%;
+        pointer-events:none;
+        background-color: #222; 
+        opacity: 0.2;
+    }
+
+    .pregunta6 h2{
+        margin-top: 8vh;
+        font-size: 3em;
+        color: white;
+    }
+
+    .pregunta6 a{
+        text-decoration: none;
+        color: white;   
+    }
+
+    .artista{
+        position: relative;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        width: 52%;
+        height: 8vh;
+        border: 5px solid silver;
+        display: inline-block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .artista h4{
+        font-size: 1.2em;
+        position: absolute;
+        top: 3vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    /* COLORES */
+    #color1{
+        background-color: rgb(255, 183, 183, 0.40)
+    }
+
+    #color1:hover{
+        border: 5px solid rgb(255, 183, 183, 1)
+    }
+
+    #color2{
+        background-color: rgb(118, 215, 196, 0.40)
+    }
+
+    #color2:hover{
+        border: 5px solid rgb(118, 215, 196, 1)
+    }
+
+    #color3{
+        background-color: rgb(249, 231, 159, 0.40)
+    }
+
+    #color3:hover{
+        border: 5px solid rgb(249, 231, 159, 1)
+    }
+
+    #color4{
+        background-color: rgb(240, 178, 122, 0.40)
+    }
+
+    #color4:hover{
+        border: 5px solid rgb(240, 178, 122, 1)
+    }
+
+    #color5{
+        background-color: rgb(174, 214, 241, 0.40)
+    }
+
+    #color5:hover{
+        border: 5px solid rgb(174, 214, 241, 1)
+    }
+
+    #color6{
+        background-color: rgb(125, 206, 160, 0.40)
+    }
+
+    #color6:hover{
+        border: 5px solid rgb(125, 206, 160, 1)
+    }

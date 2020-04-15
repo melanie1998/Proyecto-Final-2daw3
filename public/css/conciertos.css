@@ -1,0 +1,498 @@
+body{
+    margin: 0;
+    margin-top: -5vh;
+    padding: 0;
+    font-family: 'Bree Serif', serif;
+    overflow-x: hidden;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #B9B9B9; 
+}
+
+::-webkit-scrollbar-track{
+    background-color: #222; 
+}
+
+/* SLIDER */
+
+.izq{
+    position: relative;
+    margin-left: 4.8%;
+    margin-top: 16vh;   
+    z-index: 6;
+}
+
+.der{
+    position: relative;
+    margin-top: 16vh;
+    margin-left: 83.8%;
+    z-index: 6;
+}
+
+#botonizq, #botonder{
+    position: relative;
+    font-size: 3em;
+    cursor: pointer;
+    user-select: none;
+    background-color: darkgray;
+    border-radius: 10px;
+    border: 2px solid #222;
+}
+
+.fondoslider{
+    position: absolute;
+    background-color: rgb(39, 39, 39, 0.8);
+    box-shadow: inset 0px 0px 400px 6px rgba(0,0,0,0.75);
+    width: 100%;
+    height: 36vh;
+}
+
+.slider{
+    display: flex;
+    margin: auto;
+    margin-left: 4vw;
+    width: 95%;
+    transform: scale(0.91);
+}
+
+.video1{
+    position: absolute;
+    padding-left: -2%;
+    margin-top: 2vh;
+    margin-left: -5vh;
+    width: 40%;
+    height: 32vh;
+    z-index: 1;
+    transform: scale(0.60)
+}
+
+.video2{
+    position: absolute;
+    margin-top: 2vh;
+    margin-left: 11.5vw;
+    width: 40%;
+    height: 32vh;
+
+    z-index: 2;
+    transform: scale(0.80)
+}
+
+.video3{
+    position: absolute;
+    margin-top: 2vh;
+    margin-left: 27.5vw;
+    width: 40%;
+    height: 32vh;
+
+    z-index: 3;
+}
+
+.video4{
+    position: absolute;
+    margin-top: 2vh;
+    margin-left: 43.5vw;
+    width: 40%;
+    height: 32vh;
+    z-index: 2;
+    transform: scale(0.80)
+}
+
+.video5{
+    position: absolute;
+    margin-top: 2vh;
+    margin-left: 58vw;
+    width: 40%;
+    height: 32vh;
+
+    z-index: 1;
+    transform: scale(0.60)
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    text-align: right;
+}
+
+.fondo{
+    position: absolute;
+    margin-left: 80%;
+    height: 100%;
+    width: 40%;
+    font-size: 0.9vw;
+    background-color: rgba(26, 26, 26, 1);
+}
+
+.texto{
+    margin: 5% 2% 5% 2%;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+    color: whitesmoke;
+}
+
+.texto h2{
+    font-size: 2em;
+}
+
+.texto p{
+    font-size: 1.2em;
+}
+
+
+.volumeup{
+    position: absolute;
+    color: white;
+    margin-left: -25vw;
+    margin-top: 28vh;
+    font-size: 1.5vw;
+    cursor: pointer;
+    z-index: 6;
+    border: 2px solid white;
+    border-radius: 20%;
+    user-select: none;
+}
+
+.volume{
+    position: absolute;
+    color: white;
+    margin-left: -23vw;
+    margin-top: 28vh;
+    font-size: 1.5vw;
+    cursor: pointer;
+    z-index: 6;
+    border: 2px solid white;
+    border-radius: 20%;
+    user-select: none;
+}
+
+
+/* MENUTXOA */
+
+.menus{
+    font-family: 'Bree Serif', serif;
+    margin: 0;
+    margin-top: 5vh;
+    z-index: 100000;
+}
+
+.menu{
+    position: fixed;
+    background-color: #ccc;
+    margin-top: 0vh;
+    
+    width: 5%;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 5;
+    box-shadow: inset 0px 1px 50px #555;
+}
+
+.opcionesmenu{
+    margin-top: 4.5vh;
+}
+
+.menu a{
+    display: block;
+    margin-top: 15%;
+    padding: 0% 0% 20% 0%;
+    text-decoration: none;
+    color: #222;
+    text-align: center;
+}
+
+.menu .logo{
+    margin: 30% 0% 30% 0%;
+    padding: 20% 0% 20% 0%;
+}
+
+.icono{
+    font-size: 2.8em;
+}
+
+/* MENU2 */
+.menu2{
+    position: fixed;
+    background-color: #ccc;
+    margin-top: 0vh;
+    width: 11%;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 5;
+    box-shadow: inset 0px 1px 100px #555;
+}
+
+.logo2{
+    margin-top: -7vh;
+}
+
+.menu2 a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0% 0% 0% 10%;
+    padding: 8% 0% 8% 0%;
+    text-decoration: none;
+    color: #222;
+    text-align: center;
+    ;
+}
+
+.menu2 a:hover{
+    background-color: #777;
+    margin: 0;
+    padding-left: 15%;
+    box-shadow: inset 0px 0px 20px 1px rgba(10,10,10,0.75);
+}
+
+.menu2 .material-icons{
+    margin-right: 10%;
+}
+
+.menu2 a .active:hover {
+    background-color: #222;
+    color: #ccc;
+}
+
+.menu2 img{
+    margin-top: 20px;
+    padding: 20% 0% 5% 0%;
+}
+
+/* DATOS CONCIERTO */
+.fondodatos{
+    position: absolute;
+    margin-top: 14vh;
+    background-color: rgb(39, 39, 39, 0.6);
+    box-shadow: inset 0px 0px 400px 6px rgba(0,0,0,0.75);
+    width: 100%;
+    height: 200vh;
+}
+
+.datos{
+    position: relative;
+    display: inline-flex;
+    margin-top: 16vh;
+    margin-left: 0vw;
+    padding-left: 12vw;
+    width: 84%;
+}
+
+
+
+/* TABS 
+
+#tabs{
+    border: 2px solid #222;
+    margin-top: 2vh;
+    margin-left: -4vw;
+    background-color: rgb(39, 39, 39, 0.6);
+    box-shadow: inset 0px 0px 400px 6px rgba(0,0,0,0.95);
+}
+
+#tabs-1, #tabs-2, #tabs-3{
+    color: white;
+}
+
+*/
+
+/* SLIDER */
+.slider2 {
+    width: 96.8%;
+    margin: auto;
+    margin-left: 8vw;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.slider2 ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 15s infinite alternate linear;
+}
+
+.slider2 li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider2 img {
+    height: 55vh;
+    width: 90%;
+    border: 10px solid #222;
+    filter: brightness(0.55);
+    
+}
+
+li #nombre1{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 6em;
+    margin-left: 28vw;
+    margin-top: -35vh;
+}
+
+li #nombre1:hover{
+    color: gold;
+}
+
+li #nombre2{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 6em;
+    margin-left: 34vw;
+    margin-top: -35vh;
+}
+
+li #nombre2:hover{
+    color: red;
+}
+
+li #nombre3{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 6em;
+    margin-left: 34vw;
+    margin-top: -35vh;
+}
+
+li #nombre3:hover{
+    color: orangered;
+}
+
+li #nombre4{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 6em;
+    margin-left: 31vw;
+    margin-top: -35vh;
+}
+
+li #nombre4:hover{
+    color: palevioletred;
+}
+
+li #lugar1{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-left: 37vw;
+    margin-top: -15vh;
+}
+
+li #lugar2{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-left: 37vw;
+    margin-top: -15vh;
+}
+
+li #lugar3{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-left: 38vw;
+    margin-top: -15vh;
+}
+
+li #lugar4{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-left: 35vw;
+    margin-top: -15vh;
+}
+
+li #fecha1{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-left: 36.5vw;
+    margin-top: -45vh;
+}
+
+li #fecha2{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-left: 38.5vw;
+    margin-top: -45vh;
+}
+
+li #fecha3{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-left: 38.5vw;
+    margin-top: -45vh;
+}
+
+li #fecha4{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-left: 39vw;
+    margin-top: -45vh;
+}
+
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+
+
+.container{
+    margin-top: 5vh;
+}
+
+#tablaConciertos{
+    background-color: white;
+}
+
+#tablaConciertos_info{
+    color: white;
+}
+
+.sorting{
+    color: #021620;
+}
+    
+td{
+    background-color: #222;
+    color: white;
+}
+
+h1{
+    margin-top: 5vh;
+    letter-spacing: 1vh;
+    font-size: 5em;
+}

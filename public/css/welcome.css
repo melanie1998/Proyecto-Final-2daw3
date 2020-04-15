@@ -1,0 +1,265 @@
+*{
+    font-family: 'Bree Serif', serif;
+
+}
+
+body{
+    margin: 0;
+    background-image: url('Imagenes/logo2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+.fondo{
+    position: absolute;
+    margin-top: -10vh;
+    background-color: rgb(12,12,12,0.98);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.menu{
+    position: fixed;
+    background-color: #ccc;
+    margin-top: -10vh;
+    width: 5%;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 5;
+    box-shadow: inset 0px 1px 50px #555;
+}
+
+.opcionesmenu{
+    margin-top: 4.5vh;
+}
+
+.menu a{
+    display: block;
+    margin-top: 15%;
+    padding: 0% 0% 20% 0%;
+    text-decoration: none;
+    color: #222;
+    text-align: center;
+}
+
+.menu .logo{
+    margin: 30% 0% 30% 0%;
+    padding: 20% 0% 20% 0%;
+}
+
+.material-icons{
+    font-size: 2.8em;
+}
+
+.contenido{
+    margin: 0%;
+    height: auto;
+    font-family: 'Bree Serif', serif;
+    transition: all 0.5s ease-in-out;
+    user-select: none; 
+}
+
+.login{
+    position: absolute;
+    border: 5px solid white;
+    float: right;
+    margin-top: -5vh;
+    margin-left: 85vw;
+    padding: 1%;
+    border-radius: 15px;
+    color: #ccc;
+    font-size: 2em;
+    font-family: 'Bree Serif', serif; 
+    cursor: pointer;
+    transition: .5s ease-in-out; 
+}
+
+.login:hover{
+    transform: scale(1.3);
+    transform: all 2s ease;
+}
+
+.heaven{
+    margin-top: 10vh;
+    margin-left: 2vw;
+    color: #ccc;
+    font-size: 15em;
+    letter-spacing: .12em;
+}
+
+#linea1{
+    margin-top: -12%;
+    border: 6px solid #ccc;
+    width: 75%;
+}
+
+#linea2{
+    border: 6px solid #ccc;
+    width: 60%;
+}
+
+#linea3{
+    border: 6px solid #ccc;
+    width: 45%;
+}
+
+#linea4{
+    border: 6px solid #ccc;
+    width: 30%;
+}
+
+#linea5{
+    border: 6px solid #ccc;
+    width: 15%;
+}
+
+#linea6{
+    border: 6px solid #ccc;
+    width: 5%;
+}
+
+.eslogan{
+    margin-top: 8vh;
+    color: #ccc;
+    font-size: 1.5em;
+    font-family: 'Arial';  
+}
+
+.m-f{
+    margin-top: 1%;
+    color: #ccc;
+    font-size: 5em;
+}
+
+.iconos{
+    color: white;
+}
+#icono1{
+    float: left; 
+    margin: -15% 0% 0% 15%; 
+    font-size: 12em; 
+}
+
+#icono2{
+    float: right;
+    margin: -16% 15% 0% 0%; 
+    font-size: 12em; 
+}
+
+.boton{
+    margin-top: -2%;
+    margin-bottom: 4.4%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #aaa;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #777777;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: #222222;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* MENU2 */
+.menu2{
+    position: fixed;
+    background-color: #ccc;
+    margin-top: -10vh;
+    width: 11%;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 5;
+    box-shadow: inset 0px 1px 100px #555;
+}
+
+.logo2{
+    margin-top: -7vh;
+}
+
+.menu2 a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0% 0% 0% 10%;
+    padding: 8% 0% 8% 0%;
+    text-decoration: none;
+    color: #222;
+    text-align: center;
+    ;
+}
+
+.menu2 a:hover{
+    background-color: #777;
+    margin: 0;
+    padding-left: 15%;
+    box-shadow: inset 0px 0px 20px 1px rgba(10,10,10,0.75);
+
+}
+
+.menu2 .material-icons{
+    margin-right: 10%;
+}
+
+.menu2 a .active:hover {
+    background-color: #222;
+    color: #ccc;
+}
+
+.menu2 img{
+    margin-top: 20px;
+    padding: 20% 0% 5% 0%;
+}
+
+.material-icons{
+    font-size: 2.8em;
+}
