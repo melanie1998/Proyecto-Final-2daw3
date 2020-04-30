@@ -16,6 +16,6 @@ class Butacas extends Model
      * @var array
      */
     protected $fillable = [
-        'titulo', 'numButaca', 'dia', 'hora', 'idUsuario'
+        'titulo', 'numButaca', 'dia', 'hora', 'idUsuario', 'idEntrada'
     ];
 }

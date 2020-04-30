@@ -23,6 +23,7 @@ class CreateEntradasCineTable extends Migration
             $table->string('fila');
             $table->string('precio');
             $table->string('idUsuario');
+            $table->integer('idEntrada')->default();
             $table->timestamps();
         });
     }

@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joker</title>
+    <title>Annabelle</title>
+    <link rel="shortcut icon" href="Imagenes/logo2.jpg" type="image/jpg" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://kit.fontawesome.com/d2b83bcd28.js" crossorigin="anonymous"></script>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/card.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/jquery.card.js"></script>
 
 </head>
 <style>
     body{
         margin: 0;
         padding: 0;
-        background-image: url('Imagenes/fondoharrypotter2.jpg');
+        background-image: url('Imagenes/fondoannabelle2.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -74,7 +79,7 @@
 
     .btncomprar{
         position: absolute;
-        margin-top: 25vh; 
+        margin-top: 3vh; 
         margin-left: 25%;
         width: 50%;
         padding: 1%;
@@ -87,6 +92,7 @@
         cursor: pointer;
         text-align: center;
         font-family: 'Bree Serif', serif;
+        pointer-events: none;
 
     }
 
@@ -355,10 +361,26 @@
     .cancelar{
         position: absolute;
         top: 92%;
-        left: 69.5%;
+        left: 63.8%;
         width: 8vw;
         height: 4vh;
         background-color: rgb(255, 0, 0);
+        border: 3px solid rgb(82, 7, 23);
+        border-radius: 15px;
+        font-size: 1.5em;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .volver{
+        position: absolute;
+        top: 92%;
+        left: 75%;
+        width: 8vw;
+        height: 4vh;
+        background-color: royalblue;
         border: 3px solid rgb(82, 7, 23);
         border-radius: 15px;
         font-size: 1.5em;
@@ -604,6 +626,253 @@
         margin-left: 20%;
     }
 
+    /*FORMULARIO CARD*/
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500);
+
+    .fondoNegro{
+        display: none;
+        margin: 0 auto;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+        position: absolute;
+        background-color:rgba(23, 23, 23, 0.9);
+    }
+
+    .formularioCompra{
+        padding: 60px 0;
+        margin: 0 auto;
+        margin-top: 18vh;
+        width: 400px;
+    }
+
+  
+    .form-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: scale(1.3);
+    }
+    .card-wrapper {
+        background-color: rgb(245, 76, 76);
+        width: 100%;
+        display: flex;
+
+    }
+    .personal-information {
+        background-color: rgb(37, 7, 7);
+        color: #fff;
+        padding: 1px 0;
+        text-align: center;
+
+    }
+    h1 {
+        font-size: 1.3em;
+        font-family: "Roboto"
+    }
+    .form-container input {
+        margin: 1px 0;
+        padding-left: 3%;
+        font-size: 14px;
+    }
+    .form-container input[type="text"]{
+        display: block;
+        height: 50px;
+        width: 97%;
+        border: none;
+    }
+    .form-container input[type="email"]{
+        display: block;
+        height: 50px;
+        width: 97%;
+        border: none;
+    }
+    .form-container input[type="submit"]{
+        display: block;
+        height: 60px;
+        width: 100%;
+        border: none;
+        background-color: rgb(70, 0, 0);
+        color: #fff;
+        margin-top: 0px;
+        cursor: pointer;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .form-container input[type="submit"]:hover{
+        background-color: darkred;
+        transition: 0.3s ease;
+    }
+    #column-left {
+        width: 46.8%;
+        float: left;
+        margin-bottom: 2px;
+    }
+    #column-right {
+        width: 46.8%;
+        float: right;
+    }
+
+    @media only screen and (max-width: 480px){
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .form-container {
+        margin: 0 2%;
+    }
+    .form-container input {
+        font-size: 1em;
+    }
+    .form-container #input-button {
+        width: 100%;
+    }
+    .form-container #input-field {
+        width: 96.5%;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    .form-container input {
+        margin: 2px 0;
+    }
+    .form-container button[type="submit"]{
+        height: 50px;
+    }
+    #column-left {
+        width: 96.5%;
+        display: block;
+        float: none;
+    }
+    #column-right {
+        width: 96.5%;
+        display: block;
+        float: none;
+    }
+    }
+
+    .form-container button[type="submit"]{
+        display: block;
+        height: 60px;
+        width: 100%;
+        border: none;
+        background-color: rgb(70, 0, 0);
+        color: #fff;
+        margin-top: 0px;
+        cursor: pointer;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .form-container button[type="submit"]:hover{
+        background-color: darkred;
+        transition: 0.3s ease;
+    }
+    
+    .botonCerrar{
+        position: absolute;
+        top: -5px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 70px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .ticket{
+        width: 700px;
+        height: 200px;
+        background-image: url(Imagenes/ticket.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: grayscale(0.25) ;
+        margin-left: 2vw;
+    }
+
+    .borde{
+        position: absolute;
+        margin: auto;
+        top: 0.4vh;
+        left: 0.28vw;
+        width: 680px;
+        height: 182px;
+        border: 5px solid white;
+
+    }
+
+    #linea{
+        position: absolute;
+        border-left: 4px dashed whitesmoke;
+        height: 200px;
+        margin-top: -21.3vh;
+        margin-left: 27vw;
+    }
+
+    #barra{
+        position: absolute;
+        margin-top: 2.8vh;
+        margin-left: 30.5vw;
+        z-index: 5;
+    }
+
+    .unuso{
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        font-size: 1.1em;
+        margin-top: 7vh;
+        margin-left: 23vw;
+        color: rgb(252, 0, 126);
+        text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;         
+        transform: rotate(270deg);
+        z-index: 5;
+    }
+
+    .titulo2{
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow: 2.5px 0 0 #000, -2.5px 0 0 #000, 0 2.5px 0 #000, 0 -2.5px 0 #000, 1.5px 1.5px #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000;         
+        position: absolute;
+        margin-top: 4vh;
+        width: 515px;
+        color: rgb(252, 0, 126);
+        font-size: 2em;;
+    }
+
+    .heavn{
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;         
+        position: absolute;
+        margin-top: 14vh;
+        width: 515px;
+        color: rgb(252, 0, 126);
+        letter-spacing: 0.6em;
+        font-size: 0.8em;
+    }
+
+    .fecha{
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;         
+        position: absolute;
+        margin-top: -0.5vh;
+        margin-left: 43vh;
+        color: rgb(252, 0, 126);
+        font-size: 1.5em;
+    }
+
+    .precio{
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;         
+        position: absolute;
+        margin-top: -0.5vh;
+        margin-left: 3vh;
+        color: rgb(252, 0, 126);
+        font-size: 1.5em;
+    }
   
 
 </style>
@@ -960,6 +1229,138 @@
                                     $("#fila").val(fila + `12` + ' '); 
                                 }
                             }
+                    }else if(dia === "SABADO"){
+                            var num = parseado2 + 1;
+                            var precio = parseado + 8;
+                            $('#numEntradas').val(num);
+                            $('#precio').val(precio + '€');
+                            $("#butaca").val(butaca + `${id}` + ' ');
+                            for(var n=0; n<21; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `1` + ' '); 
+                                }
+                            }
+                            for(var n=21; n<41; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `2` + ' '); 
+                                }
+                            }
+                            for(var n=41; n<61; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `3` + ' '); 
+                                }
+                            }
+                            for(var n=61; n<81; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `4` + ' '); 
+                                }
+                            }
+                            for(var n=81; n<101; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `5` + ' '); 
+                                }
+                            }
+                            for(var n=101; n<121; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `6` + ' '); 
+                                }
+                            }
+                            for(var n=121; n<141; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `7` + ' '); 
+                                }
+                            }
+                            for(var n=141; n<161; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `8` + ' '); 
+                                }
+                            }
+                            for(var n=161; n<181; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `9` + ' '); 
+                                }
+                            }
+                            for(var n=181; n<201; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `10` + ' '); 
+                                }
+                            }
+                            for(var n=201; n<221; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `11` + ' '); 
+                                }
+                            }
+                            for(var n=221; n<241; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `12` + ' '); 
+                                }
+                            }
+                        }else if(dia === "DOMINGO"){
+                        var num = parseado2 + 1;
+                        var precio = parseado + 8;
+                        $('#numEntradas').val(num);
+                        $('#precio').val(precio + '€');
+                        $("#butaca").val(butaca + `${id}` + ' ');
+                        for(var n=0; n<21; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `1` + ' '); 
+                                }
+                            }
+                            for(var n=21; n<41; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `2` + ' '); 
+                                }
+                            }
+                            for(var n=41; n<61; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `3` + ' '); 
+                                }
+                            }
+                            for(var n=61; n<81; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `4` + ' '); 
+                                }
+                            }
+                            for(var n=81; n<101; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `5` + ' '); 
+                                }
+                            }
+                            for(var n=101; n<121; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `6` + ' '); 
+                                }
+                            }
+                            for(var n=121; n<141; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `7` + ' '); 
+                                }
+                            }
+                            for(var n=141; n<161; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `8` + ' '); 
+                                }
+                            }
+                            for(var n=161; n<181; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `9` + ' '); 
+                                }
+                            }
+                            for(var n=181; n<201; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `10` + ' '); 
+                                }
+                            }
+                            for(var n=201; n<221; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `11` + ' '); 
+                                }
+                            }
+                            for(var n=221; n<241; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `12` + ' '); 
+                                }
+                            }
                     }
                     
                     counter++;
@@ -981,7 +1382,6 @@
                         var fila = $("#fila").val();
                         var dia = $("#dia").val();
                         var hora = $("#hora").val();
-                        var int = $("#precio").val();
                         var int = $("#precio").val();
                         var parseado = parseInt(int, 10);
                         var numEntradas = $("#numEntradas").val();
@@ -1384,14 +1784,72 @@
                                 }
                             }
                         }else if(dia === "DOMINGO"){
-                            var num = parseado2 + 1;
-                            var precio = parseado + 8;
-                            $('#numEntradas').val(num);
-                            $('#precio').val(precio + '€');
-                            $("#butaca").val(butaca + `${id}` + ' ');
-                          
-                            
-                        }
+                        var num = parseado2 + 1;
+                        var precio = parseado + 8;
+                        $('#numEntradas').val(num);
+                        $('#precio').val(precio + '€');
+                        $("#butaca").val(butaca + `${id}` + ' ');
+                        for(var n=0; n<21; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `1` + ' '); 
+                                }
+                            }
+                            for(var n=21; n<41; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `2` + ' '); 
+                                }
+                            }
+                            for(var n=41; n<61; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `3` + ' '); 
+                                }
+                            }
+                            for(var n=61; n<81; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `4` + ' '); 
+                                }
+                            }
+                            for(var n=81; n<101; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `5` + ' '); 
+                                }
+                            }
+                            for(var n=101; n<121; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `6` + ' '); 
+                                }
+                            }
+                            for(var n=121; n<141; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `7` + ' '); 
+                                }
+                            }
+                            for(var n=141; n<161; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `8` + ' '); 
+                                }
+                            }
+                            for(var n=161; n<181; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `9` + ' '); 
+                                }
+                            }
+                            for(var n=181; n<201; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `10` + ' '); 
+                                }
+                            }
+                            for(var n=201; n<221; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `11` + ' '); 
+                                }
+                            }
+                            for(var n=221; n<241; n++){
+                                if(n==`${id}`){
+                                    $("#fila").val(fila + `12` + ' '); 
+                                }
+                            }
+                    }
 
                         counter++;
                 }else{
@@ -1743,139 +2201,139 @@
                                     $("#fila").val(fila.replace(`12 `, ''));
                                 }
                             }
-                    }else if(dia === "SABADO"){
-                        var num = parseado2 - 1;
-                        var precio = parseado - 8;
-                        $('#numEntradas').val(num);
-                        $('#precio').val(precio + '€');
-                        $("#butaca").val(butaca.replace(`${id} `, ''));
-                        for(var n=0; n<21; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`1 `, ''));
+                        }else if(dia === "SABADO"){
+                            var num = parseado2 - 1;
+                            var precio = parseado - 8;
+                            $('#numEntradas').val(num);
+                            $('#precio').val(precio + '€');
+                            $("#butaca").val(butaca.replace(`${id} `, ''));
+                            for(var n=0; n<21; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`1 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=21; n<41; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`2 `, ''));
+                                for(var n=21; n<41; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`2 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=41; n<61; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`3 `, ''));
+                                for(var n=41; n<61; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`3 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=61; n<81; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`4 `, ''));
+                                for(var n=61; n<81; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`4 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=81; n<101; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`5 `, ''));
+                                for(var n=81; n<101; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`5 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=101; n<121; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`6 `, ''));
+                                for(var n=101; n<121; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`6 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=121; n<141; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`7 `, ''));
+                                for(var n=121; n<141; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`7 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=141; n<161; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`8 `, ''));
+                                for(var n=141; n<161; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`8 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=161; n<181; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`9 `, ''));
+                                for(var n=161; n<181; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`9 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=181; n<201; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`10 `, ''));
+                                for(var n=181; n<201; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`10 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=201; n<221; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`11 `, ''));
+                                for(var n=201; n<221; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`11 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=221; n<241; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`12 `, ''));
+                                for(var n=221; n<241; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`12 `, ''));
+                                    }
                                 }
-                            }
-                    }else if(dia === "DOMINGO"){
-                        var num = parseado2 - 1;
-                        var precio = parseado - 8;
-                        $('#numEntradas').val(num);
-                        $('#precio').val(precio + '€');
-                        $("#butaca").val(butaca.replace(`${id} `, ''));
-                        for(var n=0; n<21; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`1 `, ''));
+                        }else if(dia === "DOMINGO"){
+                            var num = parseado2 - 1;
+                            var precio = parseado - 8;
+                            $('#numEntradas').val(num);
+                            $('#precio').val(precio + '€');
+                            $("#butaca").val(butaca.replace(`${id} `, ''));
+                            for(var n=0; n<21; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`1 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=21; n<41; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`2 `, ''));
+                                for(var n=21; n<41; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`2 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=41; n<61; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`3 `, ''));
+                                for(var n=41; n<61; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`3 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=61; n<81; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`4 `, ''));
+                                for(var n=61; n<81; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`4 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=81; n<101; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`5 `, ''));
+                                for(var n=81; n<101; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`5 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=101; n<121; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`6 `, ''));
+                                for(var n=101; n<121; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`6 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=121; n<141; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`7 `, ''));
+                                for(var n=121; n<141; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`7 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=141; n<161; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`8 `, ''));
+                                for(var n=141; n<161; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`8 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=161; n<181; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`9 `, ''));
+                                for(var n=161; n<181; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`9 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=181; n<201; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`10 `, ''));
+                                for(var n=181; n<201; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`10 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=201; n<221; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`11 `, ''));
+                                for(var n=201; n<221; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`11 `, ''));
+                                    }
                                 }
-                            }
-                            for(var n=221; n<241; n++){
-                                if(n==`${id}`){
-                                    $("#fila").val(fila.replace(`12 `, ''));
+                                for(var n=221; n<241; n++){
+                                    if(n==`${id}`){
+                                        $("#fila").val(fila.replace(`12 `, ''));
+                                    }
                                 }
-                            }
-                    }
+                        }
 
                     if($("#butaca").val() == ""){
                         $("#tick").addClass("fas fa-check");
@@ -1906,31 +2364,39 @@
         
         function ponerDia() {
             var dia =  document.getElementById("elegirDia");
+            var hora = document.getElementById("elegirHora");
             var selectedValueDia = dia.options[dia.selectedIndex].value;
-            if(selectedValueDia == 'DIA'){
+            var selectedValueHora = hora.options[hora.selectedIndex].value;
+            if(selectedValueDia == 'DIA' || selectedValueHora == 'HORA'){
                 $("#tick").removeClass();
                 $("#tick").addClass("fas fa-ban");
                 $(".tick").css("pointer-events", "none");
                 $('#dia').val("");
+                $('#hora').val("");
             }else{
-                $('#dia').val(selectedValueDia);
-                $("#tick").addClass("fas fa-check");
-                $(".tick").css("pointer-events", "auto");
-            }
+                    $('#dia').val(selectedValueDia);
+                    $('#hora').val(selectedValueHora);
+                    $("#tick").addClass("fas fa-check");
+                    $(".tick").css("pointer-events", "auto");
+                }
   
         
         }
 
         function ponerHora() {
+            var dia =  document.getElementById("elegirDia");
             var hora =  document.getElementById("elegirHora");
             var selectedValueHora = hora.options[hora.selectedIndex].value;
-            if(selectedValueHora == 'HORA'){
+            var selectedValueDia = dia.options[dia.selectedIndex].value;
+            if(selectedValueHora == 'HORA' || selectedValueDia == 'DIA'){
                 $("#tick").removeClass();
                 $("#tick").addClass("fas fa-ban");
                 $(".tick").css("pointer-events", "none");
                 $('#hora').val("");
+                $('#dia').val("");
             }else{
                 $('#hora').val(selectedValueHora);
+                $('#dia').val(selectedValueDia);
                 $("#tick").addClass("fas fa-check");
                 $(".tick").css("pointer-events", "auto");
             }
@@ -1949,16 +2415,6 @@
           
         }
 
-        function cambiarDiaHora(){
-            $("#fila").val("");
-            $("#butaca").val("");
-            $("#numEntradas").val("0");
-            var dia = $("#dia").val();
-            var hora = $("#hora").val();
-            var a = document.getElementById('aHref'); 
-            a.href = "cambiarDiaHora/"+dia+'/'+hora;
-          
-        }
 
         function cambiarDiaHora(){
             $("#fila").val("");
@@ -1967,97 +2423,109 @@
             var dia = $("#dia").val();
             var hora = $("#hora").val();
             var a = document.getElementById('aHref'); 
-            a.href = "cambiarDiaHora/"+dia+'/'+hora;
+            a.href = "cambiarDiaHora3/"+dia+'/'+hora;
           
         }
 
         function sumarIdEntrada(){
             var dia = $("#dia").val();
             var hora = $("#hora").val();
-        for(var j=0; j<241; j++){
-            if($(`#butaca${j}`).hasClass('clicked')){
-                for(var n=0; n<21; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '1', function(response) {
-                            })
+            var idEntrada = $("#idEntrada").val();
+            for(var j=0; j<241; j++){
+                if($(`#butaca${j}`).hasClass('clicked')){
+                    for(var n=0; n<21; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '1' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=21; n<41; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '2', function(response) {
-                            })
+                        for(var n=21; n<41; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '2' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=41; n<61; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '3', function(response) {
-                            })
+                        for(var n=41; n<61; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '3' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=61; n<81; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '4', function(response) {
-                            })
+                        for(var n=61; n<81; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '4' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=81; n<101; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '5', function(response) {
-                            })
+                        for(var n=81; n<101; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '5' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=101; n<121; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '6', function(response) {
-                            })
+                        for(var n=101; n<121; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '6' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=121; n<141; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '7', function(response) {
-                            })
+                        for(var n=121; n<141; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '7' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=141; n<161; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '8', function(response) {
-                            })
+                        for(var n=141; n<161; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '8' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=161; n<181; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '9', function(response) {
-                            })
+                        for(var n=161; n<181; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '9' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=181; n<201; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '10', function(response) {
-                            })
+                        for(var n=181; n<201; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '10' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=201; n<221; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '11', function(response) {
-                            })
+                        for(var n=201; n<221; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/' + '11' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
-                    for(var n=221; n<241; n++){
-                        if(n==`${j}`){
-                            $.get('guardarNumButaca/'+j +'/'+dia+'/'+hora+'/' + '12', function(response) {
-                            })
+                        for(var n=221; n<241; n++){
+                            if(n==`${j}`){
+                                $.get('guardarNumButaca3/'+j +'/'+dia+'/'+hora+'/'+'12' + '/' + idEntrada, function(response) {
+                                })
+                            }
                         }
-                    }
+                }
+            
             }
-           
-        }
-        }
+            }
+
+        $( document ).ready(function() {
+        $( ".btncomprar" ).click(function() {
+            $(".fondoNegro").fadeIn();
+        });
+        $( ".botonCerrar" ).click(function() {
+            $(".fondoNegro").fadeOut();
+        });
+
+
+    });
         
 
 
 </script>
 <body>
-    <form id="form" method="POST" action="{{ route('compraEntradas') }}">
+    <form id="form" method="POST" action="{{ route('compraEntradas3') }}">
         @csrf
 
         <div class="formulario">
@@ -2065,14 +2533,48 @@
                 <h2>Compra tu Entrada</h2>
               
             </div>
-            <p><label id="label1">TITULO: JOKER</label></p>
+            <input type="text" id="idEntrada" name="idEntrada" value="{{Session::get('idEntrada')}}" style="display: none;">
+            <p><label id="label1">TITULO: ANNABELLE</label></p>
             <p><label id="label1">Numero de entradas: </label><input type="text" id="numEntradas" name="numEntradas" value="0"></p>
             <p><label id="label1">Num butacas: </label><input type="text" id="butaca" name="butaca" value=""></p>
             <p><label id="label1">Num fila/s: </label><input type="text" id="fila" name="fila" value=""></p>
             <p><label id="label1">PRECIO:</label><input type="text" id="precio" name="precio" value="0€"></p>
             <p><label id="label1">Dia: </label><input type="text" id="dia" name="dia" value="{{Session::get('dia')}}"></p>
             <p><label id="label1">Hora: </label><input type="text" id="hora" name="hora" value="{{Session::get('hora')}}"></p>
-            <button type="submit"class="btncomprar" onclick="sumarIdEntrada();">COMPRAR</button>  
+            <img id="barra" src="Imagenes/barras.jpg" width="10%">
+            <div class="ticket">
+                <div class="borde"></div>
+                <center><div class="titulo2"><h2>ANNABELLE</h2></div></center>
+                <center><div class="heavn"><h2>HEAVN</h2></div></center>
+                <div class="fecha"><h3>{{Session::get('pasarFecha')}}</h3></div>
+                <div class="precio"><h3>{{Session::get('pasarPrecio')}}</h3></div>
+                <div class="unuso"><h3>SOLO UN USO</h3></div>
+            </div>
+            <vr id="linea"></vr>
+              <div class="btncomprar" style="{{ session()->get( 'pointerEvent' ) }}">COMPRAR</div>
+        </div>
+
+        <div class="fondoNegro">
+            <div class="botonCerrar">&times;</div>
+            <div class="formularioCompra">
+                <div class="form-container">
+                <div class="personal-information">
+                    <h1>Realizar pago</h1>
+                </div>
+        
+                <input id="column-left" type="text" name="first-name" placeholder="Usuario" />
+                <input id="column-right" type="text" name="last-name" placeholder="Nombre y Apellido"/>
+                <input id="input-field" type="text" name="number" placeholder="Numero de tarjeta de credito"/>
+                <input id="column-left" type="text" name="expiry" placeholder="MM / AA"/>
+                <input id="column-right" type="text" name="cvc" placeholder="CCV"/>
+        
+                <div class="card-wrapper"></div>
+        
+                
+                <button onclick="sumarIdEntrada();" type="submit" id="input-button" >COMPRAR</button>  
+
+            </div>
+            </div>
         </div>
     </form>
     <div class="encabezado">
@@ -2135,8 +2637,8 @@
             </select>
         </div>
         <div class="tick"onclick="cambiarDiaHora();" style="pointer-events: none;">
-            <a href="" id="aHref" >
-                <i class="fas fa-check" id="tick"></i>
+            <a href="" id="aHref" style="text-decoration: none; color: white;">
+                <i class="fas fa-ban" id="tick"></i>
             </a>
         </div>
     </div>
@@ -2596,7 +3098,7 @@
             
             @if(Session::get('data40') == '40')
             <div id="butaca40">
-                <img src="Imagenes/sillagranate.png" title="OCUPADO">
+                <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
             @else 
             <div id="butaca40" onclick="cambiarColor(40)" onmouseenter="mouseEnter(40)" onmouseleave="mouseLeave(40)">
@@ -2605,7 +3107,7 @@
             @endif
            
             
-            @if(Session::get('data41') == '40')
+            @if(Session::get('data41') == '41')
             <div id="butaca41">
                 <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
@@ -2894,7 +3396,7 @@
             
             @if(Session::get('data67') == '67')
             <div id="butaca67">
-                <img src="Imagenes/sillagranate.png" title="OCUPADO">
+                <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
             @else 
             <div id="butaca67" onclick="cambiarColor(67)" onmouseenter="mouseEnter(67)" onmouseleave="mouseLeave(67)">
@@ -2905,7 +3407,7 @@
             
             @if(Session::get('data68') == '68')
             <div id="butaca68">
-                <img src="Imagenes/sillagranate.png" title="OCUPADO">
+                <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
             @else 
             <div id="butaca68" onclick="cambiarColor(68)" onmouseenter="mouseEnter(68)" onmouseleave="mouseLeave(68)">
@@ -2963,7 +3465,7 @@
             
             @if(Session::get('data73') == '73')
             <div id="butaca73">
-                <img src="Imagenes/sillagranate.png" title="OCUPADO">
+                <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
             @else 
             <div id="butaca73" onclick="cambiarColor(73)" onmouseenter="mouseEnter(73)" onmouseleave="mouseLeave(73)">
@@ -3294,7 +3796,7 @@
             @endif
             
             
-            @if(Session::get('data31') == '31')
+            @if(Session::get('data103') == '103')
             <div id="butaca103">
                 <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
@@ -3430,7 +3932,7 @@
             
             @if(Session::get('data115') == '115')
             <div id="butaca115">
-                <img src="Imagenes/sillagranate.png" title="OCUPADO">
+                <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
             @else 
             <div id="butaca115" onclick="cambiarColor(115)" onmouseenter="mouseEnter(115)" onmouseleave="mouseLeave(115)">
@@ -4239,7 +4741,7 @@
             
             @if(Session::get('data188') == '188')
             <div id="butaca188">
-                <img src="Imagenes/sillagranate.png" title="OCUPADO">
+                <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
             @else 
             <div id="butaca188" onclick="cambiarColor(188)" onmouseenter="mouseEnter(188)" onmouseleave="mouseLeave(188)">
@@ -4483,7 +4985,7 @@
             
             @if(Session::get('data210') == '210')
             <div id="butaca210">
-                <img src="Imagenes/sillagranate.png" title="OCUPADO">
+                <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
             @else 
             <div id="butaca210" onclick="cambiarColor(210)" onmouseenter="mouseEnter(210)" onmouseleave="mouseLeave(210)">
@@ -4552,7 +5054,7 @@
             
             @if(Session::get('data216') == '216')
             <div id="butaca216">
-                <img src="Imagenes/sillagranate.png" title="OCUPADO">
+                <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
             @else 
             <div id="butaca216" onclick="cambiarColor(216)" onmouseenter="mouseEnter(216)" onmouseleave="mouseLeave(216)">
@@ -4618,7 +5120,7 @@
             
             @if(Session::get('data222') == '222')
             <div id="butaca222">
-                <img src="Imagenes/sillagranate.png" title="OCUPADO">
+                <img src="Imagenes/sillaroja.png" title="OCUPADO">
             </div>
             @else 
             <div id="butaca222" onclick="cambiarColor(222)" onmouseenter="mouseEnter(222)" onmouseleave="mouseLeave(222)">
@@ -4835,5 +5337,17 @@
         <h3>Butacas Seleccionadas <div class="cuadroVerde"></div></h3>
     </div>
     <div class="cancelar" onclick="cancelarButacas();">RESET</div>
+    <div class="volver"><a href="verCine" style="text-decoration: none; color: white;">VOLVER</a></div>
 </body>
+<script id="rendered-js">
+
+    $('form').card({
+        container: '.card-wrapper',
+        width: 280,
+
+        formSelectors: {
+            nameInput: 'input[name="first-name"], input[name="last-name"]'
+        }
+    });
+    </script>
 </html>

@@ -764,25 +764,25 @@
         </div>
         <div class="slider2">
             <ul>
-               <li><a href="reservaConcierto1">
+               <li><a href="ponerAgotado">
                     <img src="{{asset('Imagenes/concierto1.jpg')}}" alt="">
                     <h2 id="nombre1">ED SHEERAN</h2>
                     <h3 id="lugar1">WIZIK CENTER</h3>
                     <h4 id="fecha1">16 DE JUNIO</h4>
                 </a></li>
-                <li><a href="reservaConcierto2">
+                <li><a href="ponerAgotado2">
                     <img src="{{asset('Imagenes/concierto2.jpg')}}" alt="">
                     <h2 id="nombre2">HARD GZ</h2>
                     <h3 id="lugar2">PALAU SANT JORDI</h3>
                     <h4 id="fecha2">30 DE JUNIO</h4>
                 </a></li>
-                <li><a href="reservaConcierto3">
+                <li><a href="ponerAgotado3">
                     <img src="{{asset('Imagenes/concierto3.jpg')}}" alt="">
                     <h2 id="nombre3">THE 1975</h2>
                     <h3 id="lugar3">BILBAO ARENA</h3>
                     <h4 id="fecha3">12 DE JULIO</h4>
                 </a></li>
-                <li><a href="reservaConcierto4">
+                <li><a href="ponerAgotado4">
                     <img src="{{asset('Imagenes/concierto4.jpg')}}" alt="">
                     <h2 id="nombre4">BAD BUNNY</h2>
                     <h3 id="lugar4">ESTADIO DE LA CARTUJA</h3>

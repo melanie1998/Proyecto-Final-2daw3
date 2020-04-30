@@ -560,23 +560,39 @@
         margin-left: -16.5px;
         position: absolute;
         width: 3%;
+        cursor: pointer;
     }
 
     .iconosPlay{
         margin-left: -16.5px;
         position: absolute;
         width: 3%;
+        cursor: pointer;
     }
 
     #botonRefresh{
         position: absolute;
         margin-left: 92%; 
         margin-top: 1%;
+        cursor: pointer;
     }
 
     #botonRefresh img{
         width: 40%
     }
+
+    
+    #botonRefresh2{
+        position: absolute;
+        margin-left: 92%; 
+        margin-top: 1%;
+        cursor: pointer;
+    }
+
+    #botonRefresh2 img{
+        width: 40%
+    }
+
 
    
 </style>
@@ -1106,6 +1122,10 @@
             location.reload();
         });
 
+        $('#botonRefresh2').click(function (){
+            location.reload();
+        });
+
     });  
 
 </script>
@@ -1398,9 +1418,9 @@
                             </div>
                         </div>
                         <div id="tabs-4">
-                            <div id="botonRefresh">
-                                    <img src="Imagenes/refresh.png">
-                                </div>
+                            <div id="botonRefresh" title="Actualizar">
+                                <img src="Imagenes/refresh.png">
+                            </div>
                             <div class="container"> 
                                     <escuchadas-component></escuchadas-component>
                             
@@ -1408,7 +1428,7 @@
                         </div>
             
                         <div id="tabs-5">
-                            <div id="botonRefresh">
+                            <div id="botonRefresh2" title="Actualizar">
                                 <img src="Imagenes/refresh.png">
                             </div>
                             <div class="container">

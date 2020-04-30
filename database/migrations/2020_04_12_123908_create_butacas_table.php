@@ -21,6 +21,7 @@ class CreateButacasTable extends Migration
             $table->string('dia');
             $table->string('hora');
             $table->string('idUsuario');
+            $table->integer('idEntrada')->default();
             $table->timestamps();
         });
     }

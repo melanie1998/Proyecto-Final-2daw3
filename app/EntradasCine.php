@@ -16,6 +16,6 @@ class EntradasCine extends Model
      * @var array
      */
     protected $fillable = [
-        'tituloPelicula', 'dia', 'hora', 'numEntradas', 'numButaca', 'fila', 'precio', 'idUsuario'
+        'tituloPelicula', 'dia', 'hora', 'numEntradas', 'numButaca', 'fila', 'precio', 'idUsuario', 'idEntrada'
     ];
 }

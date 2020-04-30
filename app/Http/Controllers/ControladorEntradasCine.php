@@ -8,11 +8,25 @@ use App\Butacas;
 use App\EntradasCine;
 use Auth;
 use DB;
+use App\Mail\EnviarDatosCompraCine;
+use Illuminate\Support\Facades\Mail;
 
 class ControladorEntradasCine extends Controller
 {
 
-  
+    public function guardarNumButaca($butaca, $dia, $hora, $fila, $idEntrada){
+        $datos = new Butacas();
+        $datos->titulo = 'Joker';
+        $datos->numButaca = $butaca;
+        $datos->fila = $fila;
+        $datos->dia = $dia;
+        $datos->hora = $hora;
+        $datos->idUsuario = Auth::user()->usuario;
+        $datos->idEntrada = $idEntrada;
+        $datos->save();  
+        
+    }
+
     public function compraEntradas(Request $request){
         $validator = Validator::make($request->all(),[
             'numEntradas' => ['required'],
@@ -43,33 +57,53 @@ class ControladorEntradasCine extends Controller
             $datos->fila = $request->input('fila');    
             $datos->precio = $request->input('precio');
             $datos->idUsuario = Auth::user()->usuario;
+            $datos->idEntrada = $request->input('idEntrada');
             $datos->save();
+      
+            $email = Auth::user()->email;
+            Mail::to($email)->send(new EnviarDatosCompraCine($datos));
 
-            
-       
-            return redirect()->route('verCine');
+            return redirect()->back();
         }
     
     }
-
-    public function guardarNumButaca($butaca, $dia, $hora, $fila){
-        $datos = new Butacas();
-        $datos->titulo = 'Joker';
-        $datos->numButaca = $butaca;
-        $datos->fila = $fila;
-        $datos->dia = $dia;
-        $datos->hora = $hora;
-        $datos->idUsuario = Auth::user()->usuario;
-        $datos->save();
-        
-    }
-
     
     public function cambiarDiaHora($dia, $hora){
+        $pasarFecha = "";
+        $pasarPrecio = "";
+        if($dia == 'LUNES'){
+            $pasarFecha = 'LUN';
+            $pasarPrecio = '7€';
+        }else if($dia == 'MARTES'){
+            $pasarFecha = 'MAR';
+            $pasarPrecio = '7€';
+        }else if($dia == 'MIERCOLES'){
+            $pasarFecha = 'MIE';
+            $pasarPrecio = '6€';
+        }else if($dia == 'JUEVES'){
+            $pasarFecha = 'JUE';
+            $pasarPrecio = '7€';
+        }else if($dia == 'VIERNES'){
+            $pasarFecha = 'VIE';
+            $pasarPrecio = '8€';
+        }else if($dia == 'SABADO'){
+            $pasarFecha = 'SAB';
+            $pasarPrecio = '8€';
+        }else if($dia == 'DOMINGO'){
+            $pasarFecha = 'DOM';
+            $pasarPrecio = '8€';
+        }
         $pointerEvent = "pointer-events: auto;";
-        
-        $entr = 0;
-        $entr2 = 0;      
+        $idEntradaNuevo = 0;
+        $idEntrada = EntradasCine::select('idEntrada')->latest()->first();
+        if(empty($idEntrada)){
+            $idEntradaNuevo = 0;
+        }else{
+            if(is_object($idEntrada) || is_array($idEntrada)){
+                $idEntradaNuevo = $idEntrada['idEntrada'] + 1;
+            }
+        }
+   
         $data1 = "";
         $data2 = "";
         $data3= "";
@@ -606,6 +640,8 @@ class ControladorEntradasCine extends Controller
                             $data23= $dato->numButaca;
                         }else if($dato->numButaca == '24'){
                             $data24= $dato->numButaca;
+                        }else if($dato->numButaca == '25'){
+                            $data25= $dato->numButaca;
                         }else if($dato->numButaca == '26'){
                             $data26= $dato->numButaca;
                         }else if($dato->numButaca == '27'){
@@ -645,7 +681,7 @@ class ControladorEntradasCine extends Controller
                         }else if($dato->numButaca == '44'){
                             $data44= $dato->numButaca;
                         }else if($dato->numButaca == '45'){
-                            $data4= $dato->numButaca;
+                            $data45= $dato->numButaca;
                         }else if($dato->numButaca == '46'){
                             $data46= $dato->numButaca;
                         }else if($dato->numButaca == '47'){
@@ -654,8 +690,10 @@ class ControladorEntradasCine extends Controller
                             $data48= $dato->numButaca;
                         }else if($dato->numButaca == '49'){
                             $data49= $dato->numButaca;
+                        }else if($dato->numButaca == '50'){
+                            $data50= $dato->numButaca;
                         }else if($dato->numButaca == '51'){
-                            $data51= $dato->numButaca;
+                            $data51= $dato->numButaca;   
                         }else if($dato->numButaca == '52'){
                             $data52= $dato->numButaca;
                         }else if($dato->numButaca == '53'){
@@ -1041,7 +1079,7 @@ class ControladorEntradasCine extends Controller
                 }
         }
         return redirect()->back()
-        ->with(['pointerEvent'=>$pointerEvent,'dia'=>$dia, 'hora'=>$hora, 'data1'=>$data1, 'data2'=>$data2, 'data3'=>$data3, 'data4'=>$data4, 'data5'=>$data5, 'data6'=>$data6, 'data7'=>$data7, 'data8'=>$data8, 'data9'=>$data9, 'data10'=>$data10, 'data11'=>$data11, 'data12'=>$data12, 'data13'=>$data13, 'data14'=>$data14, 'data15'=>$data15, 'data16'=>$data16, 'data17'=>$data17, 'data18'=>$data18, 'data19'=>$data19, 'data20'=>$data20, 'data21'=>$data21, 'data22'=>$data22, 'data23'=>$data23, 'data24'=>$data24, 'data25'=>$data25, 'data26'=>$data26, 'data27'=>$data27, 'data28'=>$data28, 'data29'=>$data29, 'data30'=>$data30, 'data31'=>$data31, 'data32'=>$data32, 'data33'=>$data33, 'data34'=>$data34, 'data35'=>$data35, 'data36'=>$data36, 'data37'=>$data37, 'data38'=>$data38, 'data39'=>$data39, 'data40'=>$data40, 'data41'=>$data41, 'data42'=>$data42, 'data43'=>$data43, 'data44'=>$data44, 'data45'=>$data45, 'data46'=>$data46, 'data47'=>$data47, 'data48'=>$data48, 'data49'=>$data49, 'data50'=>$data50, 'data51'=>$data51, 'data52'=>$data52, 'data53'=>$data53, 'data54'=>$data54, 'data55'=>$data55, 'data56'=>$data56, 'data57'=>$data57, 'data58'=>$data58, 'data59'=>$data59, 'data60'=>$data60, 'data61'=>$data61, 'data62'=>$data62, 'data63'=>$data63, 'data64'=>$data64, 'data65'=>$data65, 'data66'=>$data66, 'data67'=>$data67, 'data68'=>$data68, 'data69'=>$data69, 'data70'=>$data70, 'data71'=>$data71, 'data72'=>$data72, 'data73'=>$data73, 'data74'=>$data74, 'data75'=>$data75, 'data76'=>$data76, 'data77'=>$data77, 'data78'=>$data78, 'data79'=>$data79, 'data80'=>$data80, 'data81'=>$data81, 'data82'=>$data82, 'data83'=>$data83, 'data84'=>$data84, 'data85'=>$data85, 'data86'=>$data86, 'data87'=>$data87, 'data88'=>$data88, 'data89'=>$data89, 'data90'=>$data90, 'data91'=>$data91, 'data92'=>$data92, 'data93'=>$data93, 'data94'=>$data94, 'data95'=>$data95, 'data96'=>$data96, 'data97'=>$data97, 'data98'=>$data98, 'data99'=>$data99, 'data100'=>$data100, 'data101'=>$data101, 'data102'=>$data102, 'data103'=>$data103, 'data104'=>$data104, 'data105'=>$data105, 'data106'=>$data106, 'data107'=>$data107, 'data108'=>$data108, 'data109'=>$data109, 'data110'=>$data110, 'data111'=>$data111, 'data112'=>$data112, 'data113'=>$data113, 'data114'=>$data114, 'data115'=>$data115, 'data116'=>$data116, 'data117'=>$data117, 'data118'=>$data118, 'data119'=>$data119, 'data120'=>$data120, 'data121'=>$data121, 'data122'=>$data122, 'data123'=>$data123, 'data124'=>$data124, 'data125'=>$data125, 'data126'=>$data126, 'data127'=>$data127, 'data128'=>$data128, 'data129'=>$data129, 'data130'=>$data130, 'data131'=>$data131, 'data132'=>$data132, 'data133'=>$data133, 'data134'=>$data134, 'data135'=>$data135, 'data136'=>$data136, 'data137'=>$data137, 'data138'=>$data138, 'data139'=>$data139, 'data140'=>$data140, 'data141'=>$data141, 'data142'=>$data142, 'data143'=>$data143, 'data144'=>$data144, 'data145'=>$data145, 'data146'=>$data146, 'data147'=>$data147, 'data148'=>$data148, 'data149'=>$data149, 'data150'=>$data150, 'data151'=>$data151, 'data152'=>$data152, 'data153'=>$data153, 'data154'=>$data154, 'data155'=>$data155, 'data156'=>$data156, 'data157'=>$data157, 'data158'=>$data158, 'data159'=>$data159, 'data160'=>$data160, 'data161'=>$data161, 'data162'=>$data162, 'data163'=>$data163, 'data164'=>$data164, 'data165'=>$data165, 'data166'=>$data166, 'data167'=>$data167, 'data168'=>$data168, 'data169'=>$data169, 'data170'=>$data170, 'data171'=>$data171, 'data172'=>$data172, 'data173'=>$data173, 'data174'=>$data174, 'data175'=>$data175, 'data176'=>$data176, 'data177'=>$data177, 'data178'=>$data178, 'data179'=>$data179, 'data180'=>$data180, 'data181'=>$data181, 'data182'=>$data182, 'data183'=>$data183, 'data184'=>$data184, 'data185'=>$data185, 'data186'=>$data186, 'data187'=>$data187, 'data188'=>$data188, 'data189'=>$data189, 'data190'=>$data190, 'data191'=>$data191, 'data192'=>$data192, 'data193'=>$data193, 'data194'=>$data194, 'data195'=>$data195, 'data196'=>$data196, 'data197'=>$data197, 'data198'=>$data198, 'data199'=>$data199, 'data200'=>$data200, 'data201'=>$data201, 'data202'=>$data202, 'data203'=>$data203, 'data204'=>$data204, 'data205'=>$data205, 'data206'=>$data206, 'data207'=>$data207, 'data208'=>$data208, 'data209'=>$data209, 'data210'=>$data210, 'data211'=>$data211, 'data212'=>$data212, 'data213'=>$data213, 'data214'=>$data214, 'data215'=>$data215, 'data216'=>$data216, 'data217'=>$data217, 'data218'=>$data218, 'data219'=>$data219, 'data220'=>$data220, 'data221'=>$data221, 'data222'=>$data222, 'data223'=>$data223, 'data224'=>$data224, 'data225'=>$data225, 'data226'=>$data226, 'data227'=>$data227, 'data228'=>$data228, 'data229'=>$data229, 'data230'=>$data230, 'data231'=>$data231, 'data232'=>$data232, 'data233'=>$data233, 'data234'=>$data234, 'data235'=>$data235, 'data236'=>$data236, 'data237'=>$data237, 'data238'=>$data238, 'data239'=>$data239, 'data240'=>$data240]);
+        ->with(['pointerEvent'=>$pointerEvent, 'pasarFecha' => $pasarFecha, 'pasarPrecio' => $pasarPrecio,'idEntrada'=>$idEntradaNuevo,'dia'=>$dia, 'hora'=>$hora, 'data1'=>$data1, 'data2'=>$data2, 'data3'=>$data3, 'data4'=>$data4, 'data5'=>$data5, 'data6'=>$data6, 'data7'=>$data7, 'data8'=>$data8, 'data9'=>$data9, 'data10'=>$data10, 'data11'=>$data11, 'data12'=>$data12, 'data13'=>$data13, 'data14'=>$data14, 'data15'=>$data15, 'data16'=>$data16, 'data17'=>$data17, 'data18'=>$data18, 'data19'=>$data19, 'data20'=>$data20, 'data21'=>$data21, 'data22'=>$data22, 'data23'=>$data23, 'data24'=>$data24, 'data25'=>$data25, 'data26'=>$data26, 'data27'=>$data27, 'data28'=>$data28, 'data29'=>$data29, 'data30'=>$data30, 'data31'=>$data31, 'data32'=>$data32, 'data33'=>$data33, 'data34'=>$data34, 'data35'=>$data35, 'data36'=>$data36, 'data37'=>$data37, 'data38'=>$data38, 'data39'=>$data39, 'data40'=>$data40, 'data41'=>$data41, 'data42'=>$data42, 'data43'=>$data43, 'data44'=>$data44, 'data45'=>$data45, 'data46'=>$data46, 'data47'=>$data47, 'data48'=>$data48, 'data49'=>$data49, 'data50'=>$data50, 'data51'=>$data51, 'data52'=>$data52, 'data53'=>$data53, 'data54'=>$data54, 'data55'=>$data55, 'data56'=>$data56, 'data57'=>$data57, 'data58'=>$data58, 'data59'=>$data59, 'data60'=>$data60, 'data61'=>$data61, 'data62'=>$data62, 'data63'=>$data63, 'data64'=>$data64, 'data65'=>$data65, 'data66'=>$data66, 'data67'=>$data67, 'data68'=>$data68, 'data69'=>$data69, 'data70'=>$data70, 'data71'=>$data71, 'data72'=>$data72, 'data73'=>$data73, 'data74'=>$data74, 'data75'=>$data75, 'data76'=>$data76, 'data77'=>$data77, 'data78'=>$data78, 'data79'=>$data79, 'data80'=>$data80, 'data81'=>$data81, 'data82'=>$data82, 'data83'=>$data83, 'data84'=>$data84, 'data85'=>$data85, 'data86'=>$data86, 'data87'=>$data87, 'data88'=>$data88, 'data89'=>$data89, 'data90'=>$data90, 'data91'=>$data91, 'data92'=>$data92, 'data93'=>$data93, 'data94'=>$data94, 'data95'=>$data95, 'data96'=>$data96, 'data97'=>$data97, 'data98'=>$data98, 'data99'=>$data99, 'data100'=>$data100, 'data101'=>$data101, 'data102'=>$data102, 'data103'=>$data103, 'data104'=>$data104, 'data105'=>$data105, 'data106'=>$data106, 'data107'=>$data107, 'data108'=>$data108, 'data109'=>$data109, 'data110'=>$data110, 'data111'=>$data111, 'data112'=>$data112, 'data113'=>$data113, 'data114'=>$data114, 'data115'=>$data115, 'data116'=>$data116, 'data117'=>$data117, 'data118'=>$data118, 'data119'=>$data119, 'data120'=>$data120, 'data121'=>$data121, 'data122'=>$data122, 'data123'=>$data123, 'data124'=>$data124, 'data125'=>$data125, 'data126'=>$data126, 'data127'=>$data127, 'data128'=>$data128, 'data129'=>$data129, 'data130'=>$data130, 'data131'=>$data131, 'data132'=>$data132, 'data133'=>$data133, 'data134'=>$data134, 'data135'=>$data135, 'data136'=>$data136, 'data137'=>$data137, 'data138'=>$data138, 'data139'=>$data139, 'data140'=>$data140, 'data141'=>$data141, 'data142'=>$data142, 'data143'=>$data143, 'data144'=>$data144, 'data145'=>$data145, 'data146'=>$data146, 'data147'=>$data147, 'data148'=>$data148, 'data149'=>$data149, 'data150'=>$data150, 'data151'=>$data151, 'data152'=>$data152, 'data153'=>$data153, 'data154'=>$data154, 'data155'=>$data155, 'data156'=>$data156, 'data157'=>$data157, 'data158'=>$data158, 'data159'=>$data159, 'data160'=>$data160, 'data161'=>$data161, 'data162'=>$data162, 'data163'=>$data163, 'data164'=>$data164, 'data165'=>$data165, 'data166'=>$data166, 'data167'=>$data167, 'data168'=>$data168, 'data169'=>$data169, 'data170'=>$data170, 'data171'=>$data171, 'data172'=>$data172, 'data173'=>$data173, 'data174'=>$data174, 'data175'=>$data175, 'data176'=>$data176, 'data177'=>$data177, 'data178'=>$data178, 'data179'=>$data179, 'data180'=>$data180, 'data181'=>$data181, 'data182'=>$data182, 'data183'=>$data183, 'data184'=>$data184, 'data185'=>$data185, 'data186'=>$data186, 'data187'=>$data187, 'data188'=>$data188, 'data189'=>$data189, 'data190'=>$data190, 'data191'=>$data191, 'data192'=>$data192, 'data193'=>$data193, 'data194'=>$data194, 'data195'=>$data195, 'data196'=>$data196, 'data197'=>$data197, 'data198'=>$data198, 'data199'=>$data199, 'data200'=>$data200, 'data201'=>$data201, 'data202'=>$data202, 'data203'=>$data203, 'data204'=>$data204, 'data205'=>$data205, 'data206'=>$data206, 'data207'=>$data207, 'data208'=>$data208, 'data209'=>$data209, 'data210'=>$data210, 'data211'=>$data211, 'data212'=>$data212, 'data213'=>$data213, 'data214'=>$data214, 'data215'=>$data215, 'data216'=>$data216, 'data217'=>$data217, 'data218'=>$data218, 'data219'=>$data219, 'data220'=>$data220, 'data221'=>$data221, 'data222'=>$data222, 'data223'=>$data223, 'data224'=>$data224, 'data225'=>$data225, 'data226'=>$data226, 'data227'=>$data227, 'data228'=>$data228, 'data229'=>$data229, 'data230'=>$data230, 'data231'=>$data231, 'data232'=>$data232, 'data233'=>$data233, 'data234'=>$data234, 'data235'=>$data235, 'data236'=>$data236, 'data237'=>$data237, 'data238'=>$data238, 'data239'=>$data239, 'data240'=>$data240]);
     }
 
 }

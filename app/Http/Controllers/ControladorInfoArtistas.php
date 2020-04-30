@@ -16,22 +16,48 @@ class ControladorInfoArtistas extends Controller
         $genero = Test::select('respuesta')->where('pregunta', 4)->where('idUsuario', Auth::user()->usuario)->get();
         $cancion = Test::select('respuesta')->where('pregunta', 5)->where('idUsuario', Auth::user()->usuario)->get();
         $artista = Test::select('respuesta')->where('pregunta', 6)->where('idUsuario', Auth::user()->usuario)->get();
-
-        foreach($genero as $genero){
+        $guardarGenero = "";
+        if(is_object($genero) || is_array($genero)){
+            foreach($genero as $genero){
+                $guardarGenero = $genero->respuesta;
+            }
+        }
+        
+        $guardarCancion = "";
+        if(is_object($cancion) || is_array($cancion)){
             foreach($cancion as $cancion){
-                foreach($artista as $artista){
-                    $generoArtista = Cancion::select('genero')->where('artista', $artista->respuesta)->get();
-                    $generoCancion = Cancion::select('genero')->where('titulo', $cancion->respuesta)->get();
-                        foreach($generoArtista as $generoArtista){
-                            foreach($generoCancion as $generoCancion){
-                                $datos = Cancion::select('id', 'titulo', 'artista', 'duracion', 'genero')->where('genero', $genero->respuesta)->orWhere('genero', $generoCancion->genero)->orWhere('genero', $generoArtista->genero)->get();
+                $guardarCancion = $cancion->respuesta;
+            }
+        }
+        
+        $guardarArtista = "";
+        if(is_object($artista) || is_array($artista)){
+            foreach($artista as $artista){
+                $guardarArtista = $artista->respuesta;
+            }
+        }
+
+        $seleccionGenerosCancion = Cancion::select('genero')->where('titulo', $guardarCancion)->get();
+        $seleccionGenerosArtista = Cancion::select('genero')->where('artista', $guardarArtista)->get();
+        $guardarseleccionGenerosCancion = "";
+        $guardarseleccionGenerosArtista = "";
+        if(is_object($seleccionGenerosCancion) || is_array($seleccionGenerosCancion)){
+            foreach($seleccionGenerosCancion as $seleccionGenerosCancion){
+                $guardarseleccionGenerosCancion = $seleccionGenerosCancion->genero;
+            }
+        }
+
+        if(is_object($seleccionGenerosArtista) || is_array($seleccionGenerosArtista)){
+            foreach($seleccionGenerosArtista as $seleccionGenerosArtista){
+                $guardarseleccionGenerosArtista = $seleccionGenerosArtista->genero;
+            }
+        }
+
+
+        $datos = Cancion::select('id', 'titulo', 'artista', 'duracion', 'genero')->where('genero', $guardarCancion)->orWhere('genero', $guardarseleccionGenerosCancion)->orWhere('genero', $guardarseleccionGenerosArtista)->get();
                                
                          
-                            }              
-                        }
-                }
-            }
-       }
+                           
 
         return $datos;
     }

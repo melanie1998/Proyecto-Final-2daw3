@@ -584,42 +584,42 @@
         <div class="pregunta4" id="pregunta4"  style="{{ session()->get( 'color3' ) }}{{ session()->get( 'enabled3' ) }}">
             <center> 
                 <h2>¿Qué género de música te gusta más?</h2>          
-                <a href="pregunta4/pop" >
+                <a href="pregunta4/Pop" >
                     <div class="genero" id="pop">
                         <img src="Imagenes/pop.png" alt="">
                         <h4>Pop</h4>
                         <div class="negro2"></div>
                     </div>
                 </a>
-                <a href="pregunta4/indie" >
+                <a href="pregunta4/Indie Alternative" >
                     <div class="genero" id="indie">
                         <img src="Imagenes/indie.png" alt="">
                         <h4>Indie</h4>
                         <div class="negro2"></div>
                     </div>
                 </a>
-                <a href="pregunta4/trap" >
+                <a href="pregunta4/Trap" >
                     <div class="genero" id="trap">
                         <img src="Imagenes/trap.png" alt="">
                         <h4>Trap</h4>
                         <div class="negro2"></div>
                     </div>
                 </a>
-                <a href="pregunta4/electronica">
+                <a href="pregunta4/Electronica">
                     <div class="genero" id="electronica">
                         <img src="Imagenes/electronica.png" alt="">
                         <h4>Electronica</h4>
                         <div class="negro2"></div>
                     </div>
                 </a>
-                <a href="pregunta4/latino"  >
+                <a href="pregunta4/Latino"  >
                     <div class="genero" id="latino">
                         <img src="Imagenes/latino.png" alt="">
                         <h4>Latino</h4>
                         <div class="negro2"></div>
                     </div>
                 </a>
-                <a href="pregunta4/rap" >
+                <a href="pregunta4/Rap" >
                     <div class="genero" id="rap">
                         <img src="Imagenes/raphiphop.png" alt="">
                         <h4>Rap</h4>
@@ -647,9 +647,9 @@
                         <h4>Cambios - Hard GZ</h4>
                     </div>
                 </a>
-                <a href="pregunta5/Baila Baila Baila"  >
+                <a href="pregunta5/Goteo"  >
                     <div class="cancion" id="color2">
-                        <h4>Baila baila baila - Ozuna</h4>
+                        <h4>Goteo - Duki</h4>
                     </div>
                 </a>
                 <a href="pregunta5/Lonely Together"  >
@@ -678,7 +678,7 @@
                         <h4>The 1975</h4>
                     </div>
                 </a>
-                <a href="pregunta6/JBalvin">
+                <a href="pregunta6/J Balvin">
                     <div class="artista" id="color4"  >
                         <h4>J Balvin</h4>
                     </div>

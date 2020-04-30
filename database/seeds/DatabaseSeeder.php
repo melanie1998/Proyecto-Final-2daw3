@@ -15,5 +15,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ConciertosSeeder::class);
         $this->call(Artistas::class);
         $this->call(Canciones::class);
+        $this->call(ConciertosDisponibles::class);
+        $this->call(PrecioGradas::class);
+        $this->call(PrecioPistaA::class);
+        $this->call(PrecioPistaB::class);
     }
 }

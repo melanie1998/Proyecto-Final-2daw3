@@ -43,8 +43,8 @@ class Artistas extends Seeder
         ]);
 
         DB::table('Artistas')->insert([
-            'nombre' => 'David Guetta',
-            'descripcion' => 'Pierre David Guetta​, más conocido como David Guetta, ​​ es un disc-jockey de EDM y productor discográfico francés de ascendencia marroquí, sefardí y belga.',
+            'nombre' => 'Avicii',
+            'descripcion' => 'Tim Bergling, ​ más conocido por su nombre artístico Avicii, fue un DJ y compositor sueco, especializado en programación de audio, remezcla y producción de discos.​A los 16 años, comenzó a publicar sus remixes en foros de música electrónica, lo que lo llevó a su primer contrato discográfico.',
             'genero' => 'Electronica',
         ]);
 
@@ -56,7 +56,7 @@ class Artistas extends Seeder
         ]);
 
         DB::table('Artistas')->insert([
-            'nombre' => 'Colplay',
+            'nombre' => 'Coldplay',
             'descripcion' => 'Coldplay es una banda británica de pop rock y rock alternativo formada en Londres en 1996.​​ El grupo está integrado por Chris Martin, Jon Buckland, Guy Berryman y Will Champion.',
             'genero' => 'Indie Alternative',
         ]);
@@ -74,14 +74,14 @@ class Artistas extends Seeder
         ]);
 
         DB::table('Artistas')->insert([
-            'nombre' => 'Daddy Yankee',
-            'descripcion' => 'Ramón Luis Ayala Rodríguez, internacionalmente conocido como Daddy Yankee, es un cantante, actor, productor discográfico, locutor de radio​ y empresario puertorriqueño. ',
+            'nombre' => 'Luis Fonsi',
+            'descripcion' => 'Luis Alfonso Rodríguez López-Cepero, conocido artísticamente como Luis Fonsi, es un cantante, compositor y actor puertorriqueño.',
             'genero' => 'Latino',
         ]);
 
         DB::table('Artistas')->insert([
-            'nombre' => 'Sebastian Yatra',
-            'descripcion' => 'Sebastián Obando Giraldo, conocido como Sebastián Yatra, ​ es un cantante y compositor colombiano de balada romántica, pop latino y reguetón. Logró reconocimiento internacional gracias a su sencillo «Traicionera», tras firmar con Universal Music Latin Entertainment.​',
+            'nombre' => 'Karol G',
+            'descripcion' => 'Carolina Giraldo Navarro, más conocida por su nombre artístico Karol G, es una cantante y compositora colombiana.',
             'genero' => 'Latino',
         ]);
 
@@ -110,16 +110,19 @@ class Artistas extends Seeder
         ]);
 
         DB::table('Artistas')->insert([
-            'nombre' => 'Paulo Londra',
-            'descripcion' => 'Inició su carrera musical en enero de 2017 cuando lanzó su sencillo debut, «Relax»1​, que luego de unos meses estaba posicionado como un hit argentino del año.5​ Desde entonces empezó a componer y continuó lanzando canciones.',
-            'genero' => 'Trap',
-        ]);
-
-        DB::table('Artistas')->insert([
             'nombre' => 'Duki',
             'descripcion' => 'Duki comenzó a tener interés por el Trap hip hop a la edad de siete años. Escuchaba mucha variedad musical, pero sobre todo rap estadounidense, algo que le influyó de cara al futuro.2​ El freestyle llamó su atención después de ver una batalla entre Arkano y Skone, y en 2013 empezó a concursar en diferentes competiciones.',
             'genero' => 'Trap',
         ]);
+
+        
+        DB::table('Artistas')->insert([
+            'nombre' => 'J Balvin',
+            'descripcion' => 'José Álvaro Osorio Balvín conocido como J Balvin, es un cantante colombiano de música urbana, que ha logrado posicionarse tanto en el mercado musical hispano como el anglosajón, llegando a colocar sus temas en número uno, en varias listas musicales, entre ellas Billboard.​',
+            'genero' => 'Trap',
+        ]);
+
+      
 
 
     }
