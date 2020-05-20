@@ -105,7 +105,7 @@ class ControladorConciertos extends Controller
     public function generalConc1(){
         $displayNone = "display: none";
         $displayBlock = "display: block";
-        $color = "background-color: #A01600";
+        $color = "background-color: rgb(52, 7, 23)";
         $entrada = 0;
         $entradasDisponibles = ConciertosDisponibles::select('entradasDisponibles')->where('lugar', 'Wizik Center')->where('artista', 'Ed Sheeran')->get();
         if(is_object($entradasDisponibles) || is_array($entradasDisponibles)){
@@ -930,7 +930,7 @@ class ControladorConciertos extends Controller
     public function generalConc2(){
         $displayNone = "display: none";
         $displayBlock = "display: block";
-        $color = "background-color: #A01600";
+        $color = "background-color: rgb(52, 7, 23)";
         $entrada = 0;
         $entradasDisponibles = ConciertosDisponibles::select('entradasDisponibles')->where('lugar', 'Palau Sant Jordi')->where('artista', 'Hard GZ')->get();
         if(is_object($entradasDisponibles) || is_array($entradasDisponibles)){
@@ -1755,7 +1755,7 @@ class ControladorConciertos extends Controller
      public function generalConc3(){
         $displayNone = "display: none";
         $displayBlock = "display: block";
-        $color = "background-color: #A01600";
+        $color = "background-color: rgb(52, 7, 23)";
         $entrada = 0;
         $entradasDisponibles = ConciertosDisponibles::select('entradasDisponibles')->where('lugar', 'Bilbao Arena')->where('artista', 'The 1975')->get();
         if(is_object($entradasDisponibles) || is_array($entradasDisponibles)){
@@ -2579,7 +2579,7 @@ class ControladorConciertos extends Controller
      public function generalConc4(){
         $displayNone = "display: none";
         $displayBlock = "display: block";
-        $color = "background-color: #A01600";
+        $color = "background-color: rgb(52, 7, 23)";
         $entrada = 0;
         $entradasDisponibles = ConciertosDisponibles::select('entradasDisponibles')->where('lugar', 'Estadio de la Cartuja')->where('artista', 'Bad Bunny')->get();
         if(is_object($entradasDisponibles) || is_array($entradasDisponibles)){

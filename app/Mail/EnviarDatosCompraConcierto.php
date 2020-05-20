@@ -14,6 +14,7 @@ class EnviarDatosCompraConcierto extends Mailable
     //declaramos los datos
     public $datos;
 
+
   /**
    * Create a new message instance.
    *
@@ -22,6 +23,7 @@ class EnviarDatosCompraConcierto extends Mailable
   public function __construct($datos)
   {
       $this->datos=$datos;
+
   
   }
 
@@ -32,6 +34,6 @@ class EnviarDatosCompraConcierto extends Mailable
    */
   public function build()
   {
-      return $this->from('melaniemiguel16@gmail.com')->subject('DATOS DE COMPRA')->markdown('datosEnviadosEmail2')->with('datos', $this->datos);
+      return $this->from('heavnteam@gmail.com')->subject('DATOS DE COMPRA')->markdown('datosEnviadosEmail2')->with(['datos'=> $this->datos]);
   }
 }

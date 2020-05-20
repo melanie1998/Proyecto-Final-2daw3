@@ -501,6 +501,39 @@
     font-size: 1.2em;
     }
 
+    #mensajeErrorValoracion{
+    position: absolute;
+    padding-top: 13px;
+    color: red;
+    font-size: 1.2em;
+    margin-top: 6vw;
+    }
+
+    #mensajeErrorNombre{
+    position: absolute;
+    padding-top: 13px;
+    color: red;
+    font-size: 1.2em;
+    margin-top: 6vw;
+    }
+
+    #mensajeErrorEmail{
+    position: absolute;
+    padding-top: 13px;
+    color: red;
+    font-size: 1.2em;
+    margin-top: 6vw;
+    }
+
+
+    #mensajeErrorOpinion{
+    position: absolute;
+    padding-top: 13px;
+    color: red;
+    font-size: 1.2em;
+    margin-top: 6vw;
+    }
+
     .rating{
     position: absolute;
     top: 76%;
@@ -716,13 +749,18 @@
             </div>
             <div class="contacto">
                 <h2>Contactanos</h2>
-                <h4>heavn@gmail.com</h4>
+                <h4>heavnteam@gmail.com</h4>
             </div>
             </center>
         </div>
     </div>
 
-    <div class="opinion">
+    <div class="opinion" id="opinion">
+        @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
+        </div>
+    @endif
         <div class="logo">
             <img src="Imagenes/logo2.png" width="18%">
         </div>
@@ -773,8 +811,8 @@
                         <input type="radio" name="valoracion" id="star4" value="2" disabled><label for="star4" ></label>
                         <input type="radio" name="valoracion" id="star5" value="1" disabled><label for="star5" ></label>
                     @endif
+                    
                 </div>
-
                 @if(Auth::check())
                     <input type="submit" name="" value="Enviar">
                 @else

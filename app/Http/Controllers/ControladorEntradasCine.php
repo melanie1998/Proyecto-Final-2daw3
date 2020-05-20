@@ -62,7 +62,6 @@ class ControladorEntradasCine extends Controller
       
             $email = Auth::user()->email;
             Mail::to($email)->send(new EnviarDatosCompraCine($datos));
-
             return redirect()->back();
         }
     

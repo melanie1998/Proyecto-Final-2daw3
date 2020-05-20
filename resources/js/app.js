@@ -25,6 +25,8 @@ Vue.component('conciertos-component', require('./components/ConciertosComponent.
 Vue.component('playlist-component', require('./components/PlaylistRecomendadaComponent.vue').default);
 Vue.component('escuchadas-component', require('./components/EscuchadasRecienteComponent.vue').default);
 Vue.component('cancionfav-component', require('./components/CancionesFavComponent.vue').default);
+Vue.component('comprasconciertos-component', require('./components/ComprasConciertosComponent.vue').default);
+Vue.component('comprascine-component', require('./components/ComprasCineComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

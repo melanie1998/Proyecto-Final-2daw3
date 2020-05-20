@@ -301,7 +301,7 @@
     .datos{
         position: relative;
         display: inline-flex;
-        margin-top: 16vh;
+        margin-top: 11.5vh;
         margin-left: 0vw;
         padding-left: 12vw;
         width: 84%;
@@ -311,9 +311,9 @@
 
     /* SLIDER */
     .slider2 {
-        width: 96.8%;
+        width: 105.5%;
         margin: auto;
-        margin-left: 8vw;
+        margin-left: 5vw;
         overflow: hidden;
         cursor: pointer;
     }
@@ -331,9 +331,9 @@
     }
 
     .slider2 img {
-        height: 55vh;
+        height: 64vh;
         width: 90%;
-        border: 10px solid #222;
+        border: 10px solid #111;
         filter: brightness(0.55);
         
     }
@@ -343,12 +343,13 @@
         text-align: center;
         color: white;
         font-size: 6em;
-        margin-left: 28vw;
-        margin-top: -35vh;
+        margin-left: 34vw;
+        margin-top: -50vh;
+        text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 25px #000, 0 0 30px #000;
     }
 
     li #nombre1:hover{
-        color: gold;
+        color: rgba(0, 67, 253, 1);
     }
 
     li #nombre2{
@@ -356,8 +357,9 @@
         text-align: center;
         color: white;
         font-size: 6em;
-        margin-left: 34vw;
-        margin-top: -35vh;
+        margin-left: 38vw;
+        margin-top: -50vh;
+        text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 25px #000, 0 0 30px #000;
     }
 
     li #nombre2:hover{
@@ -369,8 +371,9 @@
         text-align: center;
         color: white;
         font-size: 6em;
-        margin-left: 34vw;
-        margin-top: -35vh;
+        margin-left: 38vw;
+        margin-top: -50vh;
+        text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 25px #000, 0 0 30px #000;
     }
 
     li #nombre3:hover{
@@ -382,12 +385,13 @@
         text-align: center;
         color: white;
         font-size: 6em;
-        margin-left: 31vw;
-        margin-top: -35vh;
+        margin-left: 34.5vw;
+        margin-top: -50vh;
+        text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 25px #000, 0 0 30px #000;
     }
 
     li #nombre4:hover{
-        color: palevioletred;
+        color: rgb(173, 0, 253);
     }
 
     li #lugar1{
@@ -395,8 +399,10 @@
         text-align: center;
         color: white;
         font-size: 2em;
-        margin-left: 37vw;
+        margin-left: 42vw;
         margin-top: -15vh;
+        text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000;
+
     }
 
     li #lugar2{
@@ -404,8 +410,9 @@
         text-align: center;
         color: white;
         font-size: 2em;
-        margin-left: 37vw;
+        margin-left: 40.5vw;
         margin-top: -15vh;
+        text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000;
     }
 
     li #lugar3{
@@ -413,8 +420,9 @@
         text-align: center;
         color: white;
         font-size: 2em;
-        margin-left: 38vw;
+        margin-left: 41.5vw;
         margin-top: -15vh;
+        text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000;
     }
 
     li #lugar4{
@@ -422,44 +430,9 @@
         text-align: center;
         color: white;
         font-size: 2em;
-        margin-left: 35vw;
+        margin-left: 38.5vw;
         margin-top: -15vh;
-    }
-
-    li #fecha1{
-        position: absolute;
-        text-align: center;
-        color: white;
-        font-size: 2em;
-        margin-left: 36.5vw;
-        margin-top: -45vh;
-    }
-
-    li #fecha2{
-        position: absolute;
-        text-align: center;
-        color: white;
-        font-size: 2em;
-        margin-left: 38.5vw;
-        margin-top: -45vh;
-    }
-
-    li #fecha3{
-        position: absolute;
-        text-align: center;
-        color: white;
-        font-size: 2em;
-        margin-left: 38.5vw;
-        margin-top: -45vh;
-    }
-
-    li #fecha4{
-        position: absolute;
-        text-align: center;
-        color: white;
-        font-size: 2em;
-        margin-left: 39vw;
-        margin-top: -45vh;
+        text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000;
     }
 
     @keyframes cambio {
@@ -477,7 +450,7 @@
     }
 
     .proximo{
-        margin-top: 3vh;
+        margin-top: -2vh;
         background-color: rgb(39, 39, 39, 0.8);
         box-shadow: inset 0px 0px 400px 6px rgba(0,0,0,0.75);
         padding-top: 1vh;
@@ -567,6 +540,229 @@
         color: grey;
     }
 
+    /* COUNTDOWN */
+    @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+    /* 1 */
+    .countdown{
+        position: absolute;
+        margin-top: -35vh;
+        margin-left: 30vw;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+    }
+
+    .countdown div{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        background: rgb(255, 255, 255, 0.5);
+        box-shadow: inset 0px 0px 100px 6px rgba(2, 19, 61, 0.9);
+        color: #fff;
+        margin: 0 30px;
+        font-size: 3em;
+        font-weight: 500;
+        transform: scale(1.3);
+    }
+
+    .countdown div:before{
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        height: 35px;
+        background: rgba(0, 67, 253, 1);
+        color: #fff;
+        font-size: 0.35em;
+        line-height: 35px;
+        font-weight: 300;
+    }
+
+    .countdown #day:before{
+        content: 'Días';
+    }
+
+    .countdown #hour:before{
+        content: 'Horas';
+    }
+
+    .countdown #minute:before{
+        content: 'Minutos';
+    }
+
+    .countdown #second:before{
+        content: 'Segundos';
+    }
+
+    /* 2 */
+    .countdown2{
+        position: absolute;
+        margin-top: -35vh;
+        margin-left: 30vw;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+    }
+
+    .countdown2 div{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        background: rgb(255, 255, 255, 0.5);
+        box-shadow: inset 0px 0px 100px 6px rgba(61, 2, 2, 0.9);
+        color: #fff;
+        margin: 0 30px;
+        font-size: 3em;
+        font-weight: 500;
+        transform: scale(1.3);
+    }
+
+    .countdown2 div:before{
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        height: 35px;
+        background: rgb(253, 0, 0);
+        color: #fff;
+        font-size: 0.35em;
+        line-height: 35px;
+        font-weight: 300;
+    }
+
+    .countdown2 #day2:before{
+        content: 'Días';
+    }
+
+    .countdown2 #hour2:before{
+        content: 'Horas';
+    }
+
+    .countdown2 #minute2:before{
+        content: 'Minutos';
+    }
+
+    .countdown2 #second2:before{
+        content: 'Segundos';
+    }
+
+
+    /* 3 */
+    .countdown3{
+        position: absolute;
+        margin-top: -35vh;
+        margin-left: 30vw;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+    }
+
+    .countdown3 div{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        background: rgb(255, 255, 255, 0.5);
+        box-shadow: inset 0px 0px 100px 6px rgba(61, 24, 2, 0.9);
+        color: #fff;
+        margin: 0 30px;
+        font-size: 3em;
+        font-weight: 500;
+        transform: scale(1.3);
+    }
+
+    .countdown3 div:before{
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        height: 35px;
+        background: rgb(253, 93, 0);
+        color: #fff;
+        font-size: 0.35em;
+        line-height: 35px;
+        font-weight: 300;
+    }
+
+    .countdown3 #day3:before{
+        content: 'Días';
+    }
+
+    .countdown3 #hour3:before{
+        content: 'Horas';
+    }
+
+    .countdown3 #minute3:before{
+        content: 'Minutos';
+    }
+
+    .countdown3 #second3:before{
+        content: 'Segundos';
+    }
+
+
+    /* 4 */
+    .countdown4{
+        position: absolute;
+        margin-top: -35vh;
+        margin-left: 30vw;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+    }
+
+    .countdown4 div{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        background: rgb(255, 255, 255, 0.5);
+        box-shadow: inset 0px 0px 100px 6px rgba(23, 2, 61, 0.9);
+        color: #fff;
+        margin: 0 30px;
+        font-size: 3em;
+        font-weight: 500;
+        transform: scale(1.3);
+    }
+
+    .countdown4 div:before{
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        height: 35px;
+        background: rgb(173, 0, 253);
+        color: #fff;
+        font-size: 0.35em;
+        line-height: 35px;
+        font-weight: 300;
+    }
+
+    .countdown4 #day4:before{
+        content: 'Días';
+    }
+
+    .countdown4 #hour4:before{
+        content: 'Horas';
+    }
+
+    .countdown4 #minute4:before{
+        content: 'Minutos';
+    }
+
+    .countdown4 #second4:before{
+        content: 'Segundos';
+    }
+
+
+
     
 </style>
 <script>
@@ -586,6 +782,116 @@
     });
 
 </script>
+
+<script type="text/javascript">
+    //CONCIERTO1
+    var countDate = new Date('Jun 16, 2020 21:00:00').getTime();
+       
+    function countdown1(){
+        var now = new Date().getTime();
+            gap = countDate - now;
+        
+            var second = 1000;
+            var minute = second * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+        
+            var d = Math.floor(gap / (day));
+            var h = Math.floor((gap % (day)) / (hour));
+            var m = Math.floor((gap % (hour)) / (minute));
+            var s = Math.floor((gap % (minute)) / second);
+        
+            document.getElementById('day').innerText = d;
+            document.getElementById('hour').innerText = h;
+            document.getElementById('minute').innerText = m;
+            document.getElementById('second').innerText = s;
+    }
+       
+       setInterval(function(){
+        countdown1();
+       },1000)
+
+       //CONCIERTO2
+       var countDate2 = new Date('Jun 30, 2020 21:00:00').getTime();
+       
+        function countdown2(){
+            var now2 = new Date().getTime();
+                gap2 = countDate2 - now2;
+            
+                var second2 = 1000;
+                var minute2 = second2 * 60;
+                var hour2 = minute2 * 60;
+                var day2 = hour2 * 24;
+            
+                var d2 = Math.floor(gap2 / (day2));
+                var h2 = Math.floor((gap2 % (day2)) / (hour2));
+                var m2 = Math.floor((gap2 % (hour2)) / (minute2));
+                var s2 = Math.floor((gap2 % (minute2)) / second2);
+            
+                document.getElementById('day2').innerText = d2;
+                document.getElementById('hour2').innerText = h2;
+                document.getElementById('minute2').innerText = m2;
+                document.getElementById('second2').innerText = s2;
+        }
+        
+        setInterval(function(){
+            countdown2();
+        },1000)
+
+        //CONCIERTO3
+       var countDate3 = new Date('Jul 12, 2020 21:00:00').getTime();
+       
+       function countdown3(){
+           var now3 = new Date().getTime();
+               gap3 = countDate3 - now3;
+           
+               var second3 = 1000;
+               var minute3 = second3 * 60;
+               var hour3 = minute3 * 60;
+               var day3 = hour3 * 24;
+           
+               var d3 = Math.floor(gap3 / (day3));
+               var h3 = Math.floor((gap3 % (day3)) / (hour3));
+               var m3 = Math.floor((gap3 % (hour3)) / (minute3));
+               var s3 = Math.floor((gap3 % (minute3)) / second3);
+           
+               document.getElementById('day3').innerText = d3;
+               document.getElementById('hour3').innerText = h3;
+               document.getElementById('minute3').innerText = m3;
+               document.getElementById('second3').innerText = s3;
+       }
+       
+        setInterval(function(){
+            countdown3();
+        },1000)
+
+       //CONCIERTO4
+       var countDate4 = new Date('Jul 31, 2020 21:00:00').getTime();
+       
+       function countdown4(){
+           var now4 = new Date().getTime();
+               gap4 = countDate4 - now4;
+           
+               var second4 = 1000;
+               var minute4 = second4 * 60;
+               var hour4 = minute4 * 60;
+               var day4 = hour4 * 24;
+           
+               var d4 = Math.floor(gap4 / (day4));
+               var h4 = Math.floor((gap4 % (day4)) / (hour4));
+               var m4 = Math.floor((gap4 % (hour4)) / (minute4));
+               var s4 = Math.floor((gap4 % (minute4)) / second4);
+           
+               document.getElementById('day4').innerText = d4;
+               document.getElementById('hour4').innerText = h4;
+               document.getElementById('minute4').innerText = m4;
+               document.getElementById('second4').innerText = s4;
+       }
+       
+        setInterval(function(){
+            countdown4();
+        },1000)
+    </script>
 <body>
     <div class="menus">
         <nav class="menu" >
@@ -768,25 +1074,47 @@
                     <img src="{{asset('Imagenes/concierto1.jpg')}}" alt="">
                     <h2 id="nombre1">ED SHEERAN</h2>
                     <h3 id="lugar1">WIZIK CENTER</h3>
-                    <h4 id="fecha1">16 DE JUNIO</h4>
+            
+                        <div class="countdown">
+                             <div id="day">NA</div>
+                             <div id="hour">NA</div>
+                             <div id="minute">NA</div>
+                             <div id="second">NA</div>
+                        </div>
+                  
                 </a></li>
                 <li><a href="ponerAgotado2">
                     <img src="{{asset('Imagenes/concierto2.jpg')}}" alt="">
                     <h2 id="nombre2">HARD GZ</h2>
                     <h3 id="lugar2">PALAU SANT JORDI</h3>
-                    <h4 id="fecha2">30 DE JUNIO</h4>
+                    <div class="countdown2">
+                        <div id="day2">NA</div>
+                        <div id="hour2">NA</div>
+                        <div id="minute2">NA</div>
+                        <div id="second2">NA</div>
+                   </div>
                 </a></li>
                 <li><a href="ponerAgotado3">
                     <img src="{{asset('Imagenes/concierto3.jpg')}}" alt="">
                     <h2 id="nombre3">THE 1975</h2>
                     <h3 id="lugar3">BILBAO ARENA</h3>
-                    <h4 id="fecha3">12 DE JULIO</h4>
+                    <div class="countdown3">
+                        <div id="day3">NA</div>
+                        <div id="hour3">NA</div>
+                        <div id="minute3">NA</div>
+                        <div id="second3">NA</div>
+                   </div>
                 </a></li>
                 <li><a href="ponerAgotado4">
                     <img src="{{asset('Imagenes/concierto4.jpg')}}" alt="">
                     <h2 id="nombre4">BAD BUNNY</h2>
                     <h3 id="lugar4">ESTADIO DE LA CARTUJA</h3>
-                    <h4 id="fecha4">24 DE JULIO</h4>
+                    <div class="countdown4">
+                        <div id="day4">NA</div>
+                        <div id="hour4">NA</div>
+                        <div id="minute4">NA</div>
+                        <div id="second4">NA</div>
+                   </div>
                 </a></li>
             </ul>
         </div>

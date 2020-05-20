@@ -47,10 +47,10 @@
         /* Volver */
         .volver{
             position: fixed;
-            margin-top: 85vh;
-            margin-left: 45vw;
+            margin-top: 6vh;
+            margin-left: 85vw;
             padding: 1%;
-            font-size: 3em;
+            font-size: 2em;
             background-color: rgba(23, 23, 23, 0.8);
             color: whitesmoke;
             border: 5px solid #111;
@@ -178,7 +178,7 @@
             margin-left: 1vw;
             width: 10vw;
             height: 40vh;
-            background-color: #A01600;
+            background-color: rgb(52, 7, 23);
             border: 3px solid whitesmoke;
     
         }
@@ -799,6 +799,55 @@
         cursor: pointer;
     }
 
+    .info{
+        position: absolute;
+        width: 41vw;
+        margin-left: 30vw;
+        margin-top: 88vh;
+        border-radius: 15px; 
+        background-color: rgba(23, 23, 23, 0.8);
+        color: whitesmoke;
+        border: 5px solid #111;
+
+    }
+
+    .info h3{
+        display: inline-block;
+        font-size: 1.2em;
+        font-family: 'Bree Serif', serif;
+        justify-content: center;
+        margin-right: 2.5vw;
+        margin-left: 2.5vw;
+    }
+
+    .cuadroGranate{
+        margin-top: -2.3vh;
+        margin-left: 6.5vw;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(52, 7, 23);
+        border: 2px solid black;
+    }
+
+    .cuadroRojo{
+        margin-top: -2.3vh;
+        margin-left: 5vw;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(255, 0, 0);
+        border: 2px solid black;
+    }
+
+    .cuadroAzul{
+        margin-top: -2.3vh;
+        margin-left: 7vw;
+        width: 20px;
+        height: 20px;
+        background-color: #00C1FF;
+        border: 2px solid black;
+    }
+
+
     </style>
     <script>
 
@@ -1304,7 +1353,13 @@
                     </div>
                     </div>
                 </form>
-            </center>   
+            </center>  
+            
+        <div class="info">
+            <h3>Seleccionada <div class="cuadroAzul"></div></h3>
+            <h3>Info general <div class="cuadroGranate"></div></h3>
+            <h3>Agotado <div class="cuadroRojo"></div></h3>
+        </div>
 
         <a href="/verConciertos">
             <div class="volver">

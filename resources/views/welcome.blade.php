@@ -280,6 +280,15 @@
         .material-icons{
             font-size: 2.8em;
         }
+
+        .stayathome{
+            margin: auto;
+            margin-top: -4vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+            color: #ccc;
+
+        }
     </style>
     <script>
         bNegro = false;
@@ -298,6 +307,7 @@
                     $(".menu2 a").css('color','#222');
                     $("img").attr("src", "Imagenes/logo.jpg");
                     $("body").attr("background-image", "Imagenes/logo2.jpg");
+                    $(".stayathome").css('color','#ccc');
                     bNegro = false;
                 
                 }else{
@@ -313,6 +323,7 @@
                     $(".menu2 a").css('color','#ccc');
                     $("img").attr("src", "Imagenes/logo2.jpg");
                     $("body").attr("background-image", "Imagenes/logo.jpg");
+                    $(".stayathome").css('color','#000');
                     bNegro = true;
                 }
             });  
@@ -415,6 +426,7 @@
                             <span class="slider round"></span>
                         </label>
                     </div>
+                    <div class="stayathome">#quedateencasa #stayathome</div>
                 </div>
             </center>
         </main>

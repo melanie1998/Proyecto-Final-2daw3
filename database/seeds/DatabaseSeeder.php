@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PrecioGradas::class);
         $this->call(PrecioPistaA::class);
         $this->call(PrecioPistaB::class);
+        $this->call(Peliculas::class);
+        $this->call(Series::class);
     }
 }

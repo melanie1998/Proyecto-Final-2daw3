@@ -1291,7 +1291,7 @@
                     <ul>
                     <li><a href="#tabs-1">Inicio</a></li>
                     <li><a href="#tabs-2">Generos</a></li>
-                    <li><a href="#tabs-3">Nuestras Playlist</a></li>
+                    <li><a href="#tabs-3">Nuestra Playlist</a></li>
                     <li><a href="#tabs-4">Esuchadas recientemente</a></li>
                     <li><a href="#tabs-5">Tus Canciones favoritas</a></li>
                     </ul>

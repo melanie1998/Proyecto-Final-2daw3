@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro/Login</title>
     <link rel="shortcut icon" href="Imagenes/logo2.jpg" type="image/jpg" />
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -492,7 +492,7 @@
         color: green;
         border: 2px solid green;
         background-color: lightgreen;
-        border-radius: 2em;
+        border-radius: 15px;
         box-shadow: inset 0px 0px 5px 2px rgba(0,204,0,0.75);
     }
 
@@ -507,13 +507,166 @@
         cursor: pointer;
     }
 
+    .alerta2{
+        position: absolute;
+        z-index: 8;
+        margin-top: -40vh;
+        margin-left: 40vw;
+        padding: 2%;
+        color: red;
+        border: 2px solid red;
+        background-color: rgb(238, 144, 144);
+        border-radius: 15px;
+        box-shadow: inset 0px 0px 5px 2px rgba(204, 0, 0, 0.75);
+    }
+
+    .botonCerrarAlerta2{
+        position: absolute;
+        top: -10px;
+        right: 18px;
+        transition: all 200ms;
+        font-size: 40px;
+        text-decoration: none;
+        color: red;
+        cursor: pointer;
+    }
+
+    .negro{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.75);
+        z-index: 3;
+        display: none;
+
+    }
+
+    .enviarEmail{
+        display: none;
+        position: absolute;
+        margin: auto;
+        width: 24vw;
+        height: 40vh;
+        background-color: rgb(255, 255, 255, 0.9);
+        z-index: 7;
+        border-radius: 8px;
+        border-top: 3px solid red;
+        border-bottom: 3px solid red;
+        border-left: 3px solid red;
+        border-right: 3px solid red;
+        box-shadow: inset 0px 0px 20px 2px rgba(255,0,0,0.75);
+    }
+
+    #tituloResetear{
+        margin-top: 10vh;
+        margin-bottom: 2vh;
+        font-size: 2em;
+        color: white;
+    }
+
+    #emailReseteo{
+        margin-top: 2vh;
+        width: 70%;
+    }
+
+    .botonEnviarEnlace{
+        width: 30%;
+        min-width: 100px;
+        background-color: #C9C9C9;
+        padding: 10px 10px;
+        color: black;
+        display: flex;
+        transition: .2s ease-in-out;
+        margin-right: 10px;
+        margin-top: 4vh;
+        text-decoration: none; 
+        border: 2px solid #000;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    .botonEnviarEnlace i {
+        color: black;
+        font-size: 20px;
+        padding-right: 10px;
+        transition: .3s ease-in-out; 
+        margin-top: 0.3vh;
+    }
+
+    .botonEnviarEnlace span {
+        align-self: center;
+        opacity: 1;
+        transition: .2s ease-in-out; 
+        
+    }
+
+    .botonEnviarEnlace:hover {
+        transform: scale(1.2);
+        background: linear-gradient(to right, #6E6E6E 0%, whitesmoke 100%); 
+        
+        }
+        
+    .botonEnviarEnlace:hover i {
+        transform: translateX(2.9vw) scale(1.5);
+        color: #272727; 
+        
+        }
+
+    .botonEnviarEnlace:hover span {
+        opacity: 0; 
+    }
+
+    #emailReseteo{
+        width: 18vw;
+        background: #FFF;
+        outline: none;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        color: #000;
+        font-style: 18px;
+        margin-bottom: 1vh;
+        border: none;
+        border-bottom: 2px solid #222;
+    }
+
+    #botonMostrarForm{
+        cursor: pointer;
+    }
+
+    .botonCerrarenviarEmail{
+        position: absolute;
+        top: -5px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 70px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+    }
+
+    .inputBox2 p{
+        font-size: 0.8em;
+        color: darkred;
+        margin-top: -9vh;
+    }
+
 </style>
 <body>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
        
         @if ($message = Session::get('success'))
             <div class="alerta">
                 <div class="botonCerrarAlerta">&times;</div>
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
+
+        @if ($message = Session::get('warning'))
+            <div class="alerta2">
+                <div class="botonCerrarAlerta2">&times;</div>
                 <strong>{{ $message }}</strong>
             </div>
         @endif
@@ -530,10 +683,10 @@
                             HEAVN es un servicio de venta de entradas y punto de información tanto de canciones como de peliculas y series.
                         </li>   
                         <li>
-                            Para disfrutar completamente de nuestros servicioes, registrate GRATIS.
+                            Para disfrutar completamente de nuestros servicios, registrate GRATIS.
                         </li>
                         <li>
-                            Disfruta de tus artistas favoritos y consigue tus entradas antes antes que nadie.
+                            Disfruta de tus artistas favoritos y consigue tus entradas antes que nadie.
                         </li>
                         <li>
                             Para los amantes del cine, entérate de los últimos lanzamientos de películas y series y aprovecha para verlas en los mejores cines.
@@ -570,6 +723,7 @@
                 <a href="{{ url('/redirect') }}" class="email" target="_blank">
                     <i class="far fa-envelope"></i>
                     <span>Inicia Sesión con Gmail</span>
+                    <iframe id="idlogoutframe" src="https:\accounts.google.com/logout" style="display:none"></iframe>
                 </a>
                 <form id="form" method="POST" action="{{ route('login') }}">
                     @csrf
@@ -594,16 +748,21 @@
                         </span>
                             <input type="password" name="password" id="email" placeholder="Introduce tu Contraseña">
                         <br>
-                        <div class="checkbox">
+
+                        <div id="botonMostrarForm" style="text-decoration: none">
                             <span id="text">
-                            <i class="material-icons" style="position:absolute; margin-left: -3vh">
-                                help
-                            </i>
-                            ¿Has olvidado tu contraseña?
-                        </span>
-                        <input type="checkbox" id="recuerdame" name="recuerdame" value="1">
-                        <label id="recuerdame" for="recuerdame"> Recuerdame</label><br>
-                        
+                                <i class="material-icons" style="position:absolute; margin-left: -3vh">
+                                    help
+                                </i>
+                                ¿Has olvidado tu contraseña?
+                            </span>
+                        </div>
+
+                        <div class="checkbox">
+                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                            <label class="form-check-label" id="recuerdame" for="remember">
+                                {{ __('Recuerdame') }}
+                            </label>   
                         </div>
                         <button type="submit" class="iniciarsesion">
                             <i class="material-icons" id="iconologin">account_circle</i>
@@ -691,27 +850,71 @@
             </center>   
     </div>
 
+    <div class="enviarEmail" style="{{ session()->get( 'displayBlock2' ) }}">
+        <div class="botonCerrarenviarEmail">&times;</div>
+            <center>
+                <h3 id="tituloResetear" style="color: black"><u>RESTABLECER CONTRASEÑA</u></h3>
+                <form id="resetearContrasena" method="POST" action="{{ route('resetearContrasena') }}">
+                    @csrf
+
+                        <div class="inputBox2">
+                            <span id="text2">Introduce tu email para enviarte el enlace.</span>
+                            <input type="text" name="emailReseteo" id="emailReseteo" placeholder="Introduce tu email" value="">
+                            <input type="text" id="ponerEmail" value="" style="display:none;">
+                           
+                        
+                            <button type="submit" class="botonEnviarEnlace">
+                                <i class="fas fa-at"></i>
+                                <span>ENVIAR</span>
+                            </button>    
+                            <p>{{ session()->get( 'mensaje' ) }}</p>
+                       
+                        </div>
+                </form>
+            </center>   
+    </div>
+
 <script>
     $( document ).ready(function() {
+
+        
+
         $( ".registrarse" ).click(function() {
             $(".formularioReg").fadeIn();
-        });
-
-        $( ".Botonregistro" ).click(function() { 
-            setTimeout(function(){
-                $(".alerta").fadeOut();
-            }, 2000); 
+            $(".negro").css('display', 'block');
         });
         
         $( ".botonCerrar" ).click(function() {
             $(".formularioReg").fadeOut();
+            $(".negro").css('display', 'none');
         });
 
         $( ".botonCerrarAlerta" ).click(function() {
             $(".alerta").fadeOut();
         });
+
+        $( ".botonCerrarAlerta2" ).click(function() {
+            $(".alerta2").fadeOut();
+        });
+
+        $( "#botonMostrarForm" ).click(function() {
+            $(".enviarEmail").fadeIn();
+            $(".negro").css('display', 'block');
+        });
+
+        $( ".botonCerrarenviarEmail" ).click(function() {
+            $(".enviarEmail").fadeOut();
+            $(".negro").css('display', 'none');
+        });
+        
     });
+
+
+
 </script>
+
+<div class="negro" style="{{ session()->get( 'displayBlock' ) }}{{ session()->get( 'displayBlock2' ) }}"></div>
+
 </body>
 </html>
     

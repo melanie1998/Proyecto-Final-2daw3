@@ -465,42 +465,42 @@
         <div class="pregunta1" id="pregunta1" style="{{ session()->get( 'colorGris' ) }}{{ session()->get( 'colorGris2' ) }}{{ session()->get( 'colorGris3' ) }}{{ session()->get( 'colorGris4' ) }}{{ session()->get( 'colorGris5' ) }}{{ session()->get( 'disabled1' ) }}{{ session()->get( 'disabled2' ) }}{{ session()->get( 'disabled3' ) }}{{ session()->get( 'disabled4' ) }}{{ session()->get( 'disabled5' ) }}">
             <center> 
                 <h2>¿Qué género de cine te gusta más?</h2>
-                <a href="pregunta1/documental">
+                <a href="pregunta1/Documental">
                     <div class="genero" id="documental">
                         <img src="Imagenes/documentales.png" alt="">
                         <h4>Documental</h4>
                         <div class="negro2"></div>
                     </div>
                 </a>
-                <a href="pregunta1/cienciaficcion" >
+                <a href="pregunta1/Ciencia Ficcion" >
                     <div class="genero" id="cienciaficcion">
                         <img src="Imagenes/cienciaficcion.png" alt="">
                         <h4>Ciencia Ficcion</h4>
                         <div class="negro2"></div>
                     </div>
                 </a>
-                <a href="pregunta1/comedia">
+                <a href="pregunta1/Domedia">
                     <div class="genero" id="comedia">
                         <img src="Imagenes/comedia.png" alt="">
                         <h4>Comedia</h4>
                         <div class="negro2"></div>
                     </div>
                 </a>
-                <a href="pregunta1/miedo" >
+                <a href="pregunta1/Terror" >
                     <div class="genero" id="miedo">
                         <img src="Imagenes/miedo.png" alt="">
                         <h4>Miedo</h4>
                         <div class="negro2"></div>
                     </div>
                 </a>
-                <a href="pregunta1/drama" >
+                <a href="pregunta1/Drama" >
                     <div class="genero" id="drama">
                         <img src="Imagenes/drama.png" alt="">
                         <h4>Drama</h4>
                         <div class="negro2"></div>
                     </div>
                 </a>
-                <a href="pregunta1/suspense">
+                <a href="pregunta1/Suspense">
                     <div class="genero" id="suspense">
                         <img src="Imagenes/suspense.png" alt="">
                         <h4>Suspense</h4>
@@ -513,32 +513,32 @@
         <div class="pregunta2" id="pregunta2"  style="{{ session()->get( 'color' ) }}{{ session()->get( 'enabled1' ) }}">
             <center> 
                 <h2>¿Que película elegirias?</h2>
-                <a href="pregunta2/harrypotter">
+                <a href="pregunta2/Harry Potter y las Reliquias de la Muerte 1">
                     <div class="pelicula" id="color1">
                         <h4>Harry Potter y Las Reliquias de la Muerte: Parte I</h4>
                     </div>
                 </a>
-                <a href="pregunta2/elsextosentido" >
+                <a href="pregunta2/El Sexto Sentido" >
                     <div class="pelicula" id="color2">
                         <h4>El Sexto Sentido</h4>
                     </div>
                 </a>
-                <a href="pregunta2/annabelle" >
+                <a href="pregunta2/Annabelle Vuelve a Casa" >
                     <div class="pelicula" id="color3">
                         <h4>Annabelle</h4>
                     </div>
                 </a>
-                <a href="pregunta2/starwars" >
+                <a href="pregunta2/Star Wars Episodio IX - El ascenso de Skywalker" >
                     <div class="pelicula" id="color4">
                         <h4>Star Wars</h4>
                     </div>
                 </a>
-                <a href="pregunta2/joker"   >
+                <a href="pregunta2/Joker"   >
                     <div class="pelicula" id="color5">
                         <h4>Joker</h4>
                     </div>
                 </a>
-                <a href="pregunta2/shreck"  >
+                <a href="pregunta2/Shrek"  >
                     <div class="pelicula" id="color6">
                         <h4>Shrek</h4>
                     </div>
@@ -549,32 +549,32 @@
         <div class="pregunta3" id="pregunta3"  style="{{ session()->get( 'color2' ) }}{{ session()->get( 'enabled2' ) }}">
             <center> 
                 <h2>¿Que serie elegirias?</h2>     
-                <a href="pregunta3/prisionbreak" >
+                <a href="pregunta3/Prision Break" >
                     <div class="serie" id="color3">
                         <h4>Prison Break</h4>
                     </div>
                 </a>
-                <a href="pregunta3/los100" >
+                <a href="pregunta3/Los 100" >
                     <div class="serie" id="color6">
                         <h4>Los 100</h4>
                     </div>
                 </a>
-                <a href="pregunta3/visavis" >
+                <a href="pregunta3/Vis a vis" >
                     <div class="serie" id="color2">
-                        <h4>Vis a Vis</h4>
+                        <h4>Vis a vis</h4>
                     </div>
                 </a>
-                <a href="pregunta3/sexeducation" >
+                <a href="pregunta3/Sex Education" >
                     <div class="serie" id="color5">
                         <h4>Sex Education</h4>
                     </div>
                 </a>
-                <a href="pregunta3/alosgatosnitocarlos" >
+                <a href="pregunta3/A los gatos ni tocarlos Un asesino en internet">
                     <div class="serie" id="color1">
                         <h4>A los gatos ni tocarlos: Un asesino en internet</h4>
                     </div>
                 </a>
-                <a href="pregunta3/bigbangtheory" >
+                <a href="pregunta3/Big bang theory" >
                     <div class="serie" id="color4">
                         <h4>Big bang theory</h4>
                     </div>

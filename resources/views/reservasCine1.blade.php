@@ -874,6 +874,8 @@
         color: rgb(252, 0, 126);
         font-size: 1.5em;
     }
+
+  
   
 
 </style>
@@ -889,6 +891,7 @@
                     $("#tick").removeClass();
                     $("#tick").addClass("fas fa-ban");
                     $(".tick").css("pointer-events", "none");
+                    $(".btncomprar").css("pointer-events", "auto");
                     var idEntrada = $("#idEntrada").val();
                     va = parseInt(idEntrada, 10);
                     var butaca = $("#butaca").val();
@@ -1377,6 +1380,7 @@
                         $("#tick").removeClass();
                         $("#tick").addClass("fas fa-ban");
                         $(".tick").css("pointer-events", "none");
+                        $(".btncomprar").css("pointer-events", "auto");
                         var idEntrada = $("#idEntrada").val();
                         va = parseInt(idEntrada, 10);
                         var butaca = $("#butaca").val();
@@ -2339,6 +2343,8 @@
                     if($("#butaca").val() == ""){
                         $("#tick").addClass("fas fa-check");
                         $(".tick").css("pointer-events", "auto");
+                        $(".btncomprar").css("pointer-events", "none");
+
                     }
                 }
             });   
@@ -2405,14 +2411,17 @@
         }
 
         function cancelarButacas(){
-            if($('.sillas div').hasClass('clicked')){
-                $(`.sillas div`).removeClass('clicked');
-                $(`.sillas img`).attr("src", "Imagenes/sillagranate.png"); 
-                $("#fila").val("");
-                $("#butaca").val("");
-                $("#numEntradas").val("0");
-                
-            }
+            $('.sillas div').each(function (){
+                if($('.sillas div').hasClass('clicked')){
+                    $(`.sillas div`).removeClass('clicked');
+                    $(`.sillas img`).attr("src", "Imagenes/sillagranate.png"); 
+                    $("#fila").val("");
+                    $("#butaca").val("");
+                    $("#numEntradas").val("0");
+                    counter=0;
+                    
+                }
+            });
           
         }
 
@@ -2519,6 +2528,11 @@
             $(".fondoNegro").fadeOut();
         });
 
+        $( ".botonCerrarAlerta" ).click(function() {
+            $(".alerta").fadeOut();
+        });
+
+
 
     });
         
@@ -2526,6 +2540,7 @@
 
 </script>
 <body>
+
     <form id="form" method="POST" action="{{ route('compraEntradas') }}">
         @csrf
 

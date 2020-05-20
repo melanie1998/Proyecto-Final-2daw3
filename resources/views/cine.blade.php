@@ -1066,7 +1066,7 @@
             <br>
             <a href="/reservasCine1" class="carrito" style="margin-left: -0.2vw;"><img src="Imagenes/carrito.png">Comprar Entrada</a>
             <br>
-            <a href="#" class="info"><img src="Imagenes/infoblanco.png">Ver más películas</a>
+            <a href="infoPeliculasSeries" class="info"><img src="Imagenes/infoblanco.png">Ver catálogo completo</a>
             <div class="slide"></div>
             <ul class="sci">
                 <li><a href="#pelicula1"><img src="Imagenes/one.png"></a></li>
@@ -1093,7 +1093,7 @@
             <br>
             <a href="/reservasCine2" class="carrito2" style="margin-left: -0.2vw;"><img src="Imagenes/carritonegro.png">Comprar Entrada</a>
             <br>
-            <a href="#" class="info2"><img src="Imagenes/info.png">Ver más películas</a>
+            <a href="/infoPeliculasSeries" class="info2"><img src="Imagenes/info.png">Ver catálogo completo</a>
             <div class="slide2"></div>
         </div>
     </div>
@@ -1113,7 +1113,7 @@
             <br>
             <a href="/reservasCine3" class="carrito3" style="margin-left: -0.2vw;"><img src="Imagenes/carrito.png">Comprar Entrada</a>
             <br>
-            <a href="#" class="info3"><img src="Imagenes/infoblanco.png">Ver más películas</a>
+            <a href="/infoPeliculasSeries" class="info3"><img src="Imagenes/infoblanco.png">Ver catálogo completo</a>
             <div class="slide3"></div>
         </div>
     </div>
@@ -1133,7 +1133,7 @@
             <br>
             <a href="/reservasCine4" class="carrito4" style="margin-left: -0.2vw;"><img src="Imagenes/carritonegro.png">Comprar Entrada</a>
             <br>
-            <a href="#" class="info4"><img src="Imagenes/info.png">Ver más películas</a>
+            <a href="/infoPeliculasSeries" class="info4"><img src="Imagenes/info.png">Ver catálogo completo</a>
             <div class="slide4"></div>
         </div>
     </div>

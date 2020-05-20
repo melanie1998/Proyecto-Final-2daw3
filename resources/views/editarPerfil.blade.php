@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="Imagenes/logo2.jpg" type="image/jpg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Editar Perfil</title>
 </head>
 <style>
@@ -395,23 +396,21 @@
         @endforeach
     </div>
 
-    <script>
 
-        function goBack() {
-          window.history.back();
-        }
-        
-    </script>
     <center>
-        <button class="botonVolver" onclick="goBack()">
-            <img src="{{asset('Imagenes/invalid.png')}}" width="12%">
-            <span><h4>VOLVER</h4></span>
-        </button>
+        <a href="{{url('home')}}">
+            <button class="botonVolver">
+                <img src="{{asset('Imagenes/invalid.png')}}" width="12%">
+                <span><h4>VOLVER</h4></span>
+            </button>
+        </a>
 
-        <button class="verCompra">
-            <i class="material-icons"> shopping_cart</i>
-            <span><h4>MIS COMPRAS</h4></span>
-        </button>
+        <a href="{{url('compras')}}">
+            <button class="verCompra">
+                <i class="material-icons"> shopping_cart</i>
+                <span><h4>MIS COMPRAS</h4></span>
+            </button>
+        </a>
     </center>
 </body>
 </html>

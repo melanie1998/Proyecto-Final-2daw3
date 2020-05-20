@@ -59,7 +59,7 @@ class ControladorCompraConciertos extends Controller
             $email = Auth::user()->email;
             Mail::to($email)->send(new EnviarDatosCompraConcierto($datos));
 
-            return redirect()->to('ponerAgotado2');
+            return redirect()->to('ponerAgotado');
         }
     }
 
@@ -105,7 +105,7 @@ class ControladorCompraConciertos extends Controller
             $email = Auth::user()->email;
             Mail::to($email)->send(new EnviarDatosCompraConcierto($datos));
 
-            return redirect()->to('ponerAgotado2');
+            return redirect()->to('ponerAgotado');
         }
     }
 
@@ -152,7 +152,7 @@ class ControladorCompraConciertos extends Controller
             $email = Auth::user()->email;
             Mail::to($email)->send(new EnviarDatosCompraConcierto($datos));
 
-            return redirect()->to('ponerAgotado2');
+            return redirect()->to('ponerAgotado');
         }
     }
 
@@ -198,7 +198,7 @@ class ControladorCompraConciertos extends Controller
             $email = Auth::user()->email;
             Mail::to($email)->send(new EnviarDatosCompraConcierto($datos));
 
-            return redirect()->to('ponerAgotado2');
+            return redirect()->to('ponerAgotado');
         }
     }
 
@@ -244,7 +244,7 @@ class ControladorCompraConciertos extends Controller
             $email = Auth::user()->email;
             Mail::to($email)->send(new EnviarDatosCompraConcierto($datos));
 
-            return redirect()->to('ponerAgotado2');
+            return redirect()->to('ponerAgotado');
         }
     }
 

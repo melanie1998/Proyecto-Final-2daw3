@@ -16,6 +16,6 @@ class EntradasConciertos extends Model
      * @var array
      */
     protected $fillable = [
-        'idUsuario', 'artista', 'fecha', 'hora', 'lugar', 'gradaPista', 'cantEntradas', 'precio',
+        'idUsuario', 'artista', 'fecha', 'hora', 'lugar', 'gradaPista', 'cantEntradas', 'precio', 'idEntrada',
     ];
 }

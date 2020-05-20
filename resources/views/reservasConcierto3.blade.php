@@ -3,9 +3,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Compra entradas</title>
-        <link rel="shortcut icon" href="Imagenes/logo2.jpg" type="image/jpg" />
         <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="Imagenes/logo2.jpg" type="image/jpg" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://kit.fontawesome.com/d2b83bcd28.js" crossorigin="anonymous"></script>
+        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/card.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/jquery.card.js"></script>
     
     </head>
     <style>
@@ -38,10 +47,10 @@
         /* Volver */
         .volver{
             position: fixed;
-            margin-top: 85vh;
-            margin-left: 45vw;
+            margin-top: 6vh;
+            margin-left: 85vw;
             padding: 1%;
-            font-size: 3em;
+            font-size: 2em;
             background-color: rgba(23, 23, 23, 0.8);
             color: whitesmoke;
             border: 5px solid #111;
@@ -169,7 +178,7 @@
             margin-left: 1vw;
             width: 10vw;
             height: 40vh;
-            background-color: #A01600;
+            background-color: rgb(52, 7, 23);
             border: 3px solid whitesmoke;
     
         }
@@ -789,6 +798,55 @@
         color: #fff;
         cursor: pointer;
     }
+
+    .info{
+        position: absolute;
+        width: 41vw;
+        margin-left: 30vw;
+        margin-top: 88vh;
+        border-radius: 15px; 
+        background-color: rgba(23, 23, 23, 0.8);
+        color: whitesmoke;
+        border: 5px solid #111;
+
+    }
+
+    .info h3{
+        display: inline-block;
+        font-size: 1.2em;
+        font-family: 'Bree Serif', serif;
+        justify-content: center;
+        margin-right: 2.5vw;
+        margin-left: 2.5vw;
+    }
+
+    .cuadroGranate{
+        margin-top: -2.3vh;
+        margin-left: 6.5vw;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(52, 7, 23);
+        border: 2px solid black;
+    }
+
+    .cuadroRojo{
+        margin-top: -2.3vh;
+        margin-left: 5vw;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(255, 0, 0);
+        border: 2px solid black;
+    }
+
+    .cuadroAzul{
+        margin-top: -2.3vh;
+        margin-left: 7vw;
+        width: 20px;
+        height: 20px;
+        background-color: #00C1FF;
+        border: 2px solid black;
+    }
+
        
     </style>
     <script>
@@ -927,7 +985,7 @@
                     <h3 id="titulo"><u>GENERAL</u></h3>
                     <span id="text2">Artista: THE 1975</span>
                     <span id="text2">Lugar: Bilbao Arena</span>
-                    <span id="text2">Fecha: Martes, 12 de Julio 2020</span>
+                    <span id="text2">Fecha: Domingo, 12 de Julio 2020</span>
                     <span id="text2">Hora: 21:00</span>
                 </div>
         </div>
@@ -1295,7 +1353,13 @@
                 </div>
                 </div>
             </form>
-        </center>   
+        </center>  
+        
+    <div class="info">
+        <h3>Seleccionada <div class="cuadroAzul"></div></h3>
+        <h3>Info general <div class="cuadroGranate"></div></h3>
+        <h3>Agotado <div class="cuadroRojo"></div></h3>
+    </div>
 
     <a href="/verConciertos">
         <div class="volver">

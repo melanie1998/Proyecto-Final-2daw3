@@ -113,10 +113,8 @@ public function redirectToProvider()
         // check if they're an existing user
         $existingUser = User::where('email', $user->email)->first();
         if($existingUser){
-            // log them in
-         
-         
-            auth()->login($existingUser, true);
+  
+            return redirect()->route('registrologin')->with('warning', 'Este email ya está registrado.');
         } else {
             // create a new user
             $newUser                     = new User;
@@ -128,7 +126,7 @@ public function redirectToProvider()
             $newUser->fotoPerfil         = "iconopersona.png";
             $newUser->password           = "";
             $newUser->google_id          = $user->id;
-            $newUser->contadorSesion     = 1;
+            $newUser->contadorSesion     = 0;
             $newUser->save();
             auth()->login($newUser, true);
         }

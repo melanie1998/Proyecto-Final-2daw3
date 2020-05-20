@@ -32,6 +32,6 @@ class EnviarDatosCompraCine extends Mailable
      */
     public function build()
     {
-        return $this->from('melaniemiguel16@gmail.com')->subject('DATOS DE COMPRA')->markdown('datosEnviadosEmail')->with('datos', $this->datos);
+        return $this->from('heavnteam@gmail.com')->subject('DATOS DE COMPRA')->markdown('datosEnviadosEmail')->with('datos', $this->datos);
     }
 }

@@ -34,7 +34,7 @@ class ConciertosDisponibles extends Seeder
         DB::table('ConciertosDisponibles')->insert([
             'lugar' => 'Bilbao Arena',
             'artista' => 'The 1975',
-            'fecha' => 'Martes, 12 de Julio 2020',
+            'fecha' => 'Domingo, 12 de Julio 2020',
             'hora' => '21:00',
             'numEntradas' => '10000',
             'entradasDisponibles' => 10000,
@@ -44,7 +44,7 @@ class ConciertosDisponibles extends Seeder
         DB::table('ConciertosDisponibles')->insert([
             'lugar' => 'Estadio de la Cartuja',
             'artista' => 'Bad Bunny',
-            'fecha' => 'Martes, 16 de Junio 2020',
+            'fecha' => 'Viernes, 31 de Julio 2020',
             'hora' => '21:00',
             'numEntradas' => 55000,
             'entradasDisponibles' => 55000,

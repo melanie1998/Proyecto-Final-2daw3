@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('fotoPerfil')->default('iconopersona.png');
             $table->string('google_id')->nullable();
             $table->integer('contadorSesion')->default(0);
+            $table->string('passwordToken')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

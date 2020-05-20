@@ -6,6 +6,12 @@ use App\PrecioPistaA;
 use App\PrecioPistaB;
 use App\PrecioGradas;
 use App\ConciertosDisponibles;
+use App\Test;
+use App\Pelicula;
+use App\ListaPeliculas;
+use App\Serie;
+use App\ListaSeries;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +35,10 @@ Route::get('/registrologin', function () {
 })->name('registrologin');
 
 Route::post('/registro', 'ControladorUsuario@registrarse')->name('registro');
+
+Route::post('resetearContrasena', 'ControladorUsuario@resetearContrasena')->name('resetearContrasena');
+Route::get('nuevaContrasena/{email}/{random}', 'ControladorUsuario@nuevaContrasena')->name('nuevaContrasena');
+Route::post('cambiarContrasena/{email}', 'ControladorUsuario@cambiarContrasena')->name('cambiarContrasena');
 
 //inicio sesion con google
 Route::get('/redirect', 'Auth\LoginController@redirectToProvider');
@@ -516,6 +526,77 @@ Route::middleware(['auth'])->group(function () {
     Route::get('guardarNumButaca4/{butaca}/{dia}/{hora}/{fila}/{idEntrada}', 'ControladorEntradasCine4@guardarNumButaca')->name('guardarNumButaca4');
     Route::post('compraEntradas4', 'ControladorEntradasCine4@compraEntradas')->name('compraEntradas4');
     Route::get('cambiarDiaHora4/{dia}/{hora}', 'ControladorEntradasCine4@cambiarDiaHora')->name('cambiarDiaHora4');
+
+    /*PARTE info PELICULAS y series */
+    Route::get('infoPeliculasSeries', function () {
+        $genero = Test::select('respuesta')->where('pregunta', 1)->where('idUsuario', Auth::user()->usuario)->get();
+        $pelicula = Test::select('respuesta')->where('pregunta', 2)->where('idUsuario', Auth::user()->usuario)->get();
+        $serie = Test::select('respuesta')->where('pregunta', 3)->where('idUsuario', Auth::user()->usuario)->get();
+        
+        $guardarGenero = "";
+        if(is_object($genero) || is_array($genero)){
+            foreach($genero as $genero){
+                $guardarGenero = $genero->respuesta;
+            }
+        }
+        
+        $guardarpelicula = "";
+        if(is_object($pelicula) || is_array($pelicula)){
+            foreach($pelicula as $pelicula){
+                $guardarpelicula = $pelicula->respuesta;
+            }
+        }
+
+        $guardarserie = "";
+        if(is_object($serie) || is_array($serie)){
+            foreach($serie as $serie){
+                $guardarserie = $serie->respuesta;
+            }
+        }
+        
+
+        $seleccionGenerospelicula = Pelicula::select('genero')->where('titulo', $guardarpelicula)->get();
+        $guardarseleccionGenerospelicula = "";
+  
+        if(is_object($seleccionGenerospelicula) || is_array($seleccionGenerospelicula)){
+            foreach($seleccionGenerospelicula as $seleccionGenerospelicula){
+                $guardarseleccionGenerospelicula = $seleccionGenerospelicula->genero;
+            }
+        }
+
+        $seleccionGenerosserie = Serie::select('genero')->where('titulo', $guardarserie)->get();
+        $guardarseleccionGenerosserie = "";
+  
+        if(is_object($seleccionGenerosserie) || is_array($seleccionGenerosserie)){
+            foreach($seleccionGenerosserie as $seleccionGenerosserie){
+                $guardarseleccionGenerosserie = $seleccionGenerosserie->genero;
+            }
+        }
+        $datos2 = ListaPeliculas::select('id', 'titulo', 'tituloSinEspacios', 'sinopsis', 'duracion', 'anio', 'genero', 'idUsuario')->where('idUsuario', Auth::user()->usuario)->get();
+        $datos = Pelicula::select('id', 'titulo', 'tituloSinEspacios', 'sinopsis', 'duracion', 'anio', 'genero', 'anadidaLista')->where('genero', $guardarGenero)->orWhere('genero', $guardarpelicula)->orWhere('genero', $guardarseleccionGenerospelicula)->get();
+        $datos3 = Pelicula::select('id', 'titulo', 'tituloSinEspacios', 'sinopsis', 'duracion', 'anio', 'genero', 'anadidaLista')->get();
+        
+        $datos5 = ListaSeries::select('id', 'titulo', 'tituloSinEspacios', 'sinopsis', 'temporadas', 'anio', 'genero', 'idUsuario')->where('idUsuario', Auth::user()->usuario)->get();
+        $datos4 = Serie::select('id', 'titulo', 'tituloSinEspacios', 'sinopsis', 'temporadas', 'anio', 'genero', 'anadidaLista')->where('genero', $guardarGenero)->orWhere('genero', $guardarserie)->orWhere('genero', $guardarseleccionGenerosserie)->get();
+        $datos6 = Serie::select('id', 'titulo', 'tituloSinEspacios', 'sinopsis', 'temporadas', 'anio', 'genero', 'anadidaLista')->get();
+        
+        return view('infoPeliculasSeries')->with(['datos' => $datos, 'datos2' => $datos2, 'datos3' => $datos3, 'datos4' => $datos4, 'datos5' => $datos5, 'datos6' => $datos6]);
+    })->name('infoPeliculasSeries');
+
+    /*PELICULAS*/
+    Route::get('anadirLista/{titulo}', 'ControladorPeliculas@anadirLista')->name('anadirLista');
+    Route::get('borrarLista/{titulo}', 'ControladorPeliculas@borrarLista')->name('borrarLista');
+
+    /*SERIES*/
+    Route::get('anadirLista2/{titulo}', 'ControladorSeries@anadirLista2')->name('anadirLista2');
+    Route::get('borrarLista2/{titulo}', 'ControladorSeries@borrarLista2')->name('borrarLista2');
+
+
+    Route::get('compras', function(){
+        return view('compras');
+    })->name('compras');
+    Route::get('comprasConciertos', 'ControladorCompras@comprasConciertos')->name('comprasConciertos');
+    Route::get('comprasCine', 'ControladorCompras@comprasCine')->name('comprasCine');
 
 });
 
